@@ -1,0 +1,32 @@
+<div class='buttons'>
+	<fieldset>
+		<legend>Filter Results</legend>
+		<%= search_field_tag('filter', value = 'Keyword Search') %>
+ 		<%= binding.pry; form_for(@maps) do |f|%>
+		<%= f.radio_button(:cats,'Cats')%>
+		<%= f.label :cats, 'Cats'%>
+		<%= f.radio_button(:dogs,'Dogs')%>
+		<%= f.label :dogs, 'Dogs'%>
+		<%= f.radio_button(:parking,'Parking')%>
+		<%= f.label :parking, 'Parking'%>
+		<% end %>
+		</form>
+	</fieldset>
+
+</div>
+
+
+<div class='map'>
+<%= gmaps({
+        "map_options" => { "type" => "ROADMAP", "center_longitude" => -87.63, "center_latitude" => 41.90, "zoom" => 13, "auto_adjust" => true},
+        "markers" => { "data" => @markers }
+        })
+        %>
+        <div class='search'>
+	<form id="searchbox" action="">
+    <input id="search" type="text" placeholder="City, Neighborhood, Zip">
+    <input id="submit" type="submit" value="Search">
+</form>
+</div>
+</div>
+ 

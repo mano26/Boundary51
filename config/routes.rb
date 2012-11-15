@@ -1,4 +1,7 @@
 Demo::Application.routes.draw do
+  resources :landings
+
+  get '/listings/results' => 'listings#results', :as => 'listings_results'
   resources :listings
 
   # The priority is based upon order of creation:
