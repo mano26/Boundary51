@@ -1,14 +1,17 @@
 class ListingsController < ApplicationController
-  # GET /listings
-  # GET /listings.json
+
   def index
     @listings = Listing.all
+<<<<<<< HEAD
     @listings = Listing.all
     @markers = '[
                  {"description": "", "title": "", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
                  {"lng": "-88", "lat": "42" }
                 ]'
     @json = Listing.all.to_gmaps4rails
+=======
+
+>>>>>>> 6e8a4fbdc9ba24e6208b09bb089d9fbb595dc4d4
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @listings }
@@ -20,9 +23,26 @@ class ListingsController < ApplicationController
     @address = Listing.find_by_id(params[:id])
   end
   
+<<<<<<< HEAD
   
   # GET /listings/1
   # GET /listings/1.json
+=======
+  def results
+    @listing = Listing.all
+    @markers = '[
+                 {"description": "Boundary51", "title": "Boundary51", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
+                 {"lng": "-88", "lat": "42" }
+                ]'
+    @json = Listing.all.to_gmaps4rails
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @json}
+    end
+  end
+
+>>>>>>> 6e8a4fbdc9ba24e6208b09bb089d9fbb595dc4d4
   def show
     @listing = Listing.find(params[:id])
 
@@ -32,8 +52,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  # GET /listings/new
-  # GET /listings/new.json
   def new
     @listing = Listing.new
 
@@ -43,13 +61,10 @@ class ListingsController < ApplicationController
     end
   end
 
-  # GET /listings/1/edit
   def edit
     @listing = Listing.find(params[:id])
   end
 
-  # POST /listings
-  # POST /listings.json
   def create
     @listing = Listing.new(params[:listing])
 
@@ -64,8 +79,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  # PUT /listings/1
-  # PUT /listings/1.json
   def update
     @listing = Listing.find(params[:id])
 
@@ -80,8 +93,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  # DELETE /listings/1
-  # DELETE /listings/1.json
   def destroy
     @listing = Listing.find(params[:id])
     @listing.destroy
@@ -91,4 +102,5 @@ class ListingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
