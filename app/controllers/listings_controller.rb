@@ -3,12 +3,18 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @listings = Listing.all
-
+    @listings = Listing.all
+    @markers = '[
+                 {"description": "", "title": "", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
+                 {"lng": "-88", "lat": "42" }
+                ]'
+    @json = Listing.all.to_gmaps4rails
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @listings }
     end
   end
+
 
   def address
     @address = Listing.find_by_id(params[:id])
