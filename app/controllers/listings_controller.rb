@@ -1,8 +1,7 @@
 class ListingsController < ApplicationController
-  # GET /listings
-  # GET /listings.json
+
   def index
-    @listing = Listing.all
+    @listings = Listing.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,8 +26,7 @@ class ListingsController < ApplicationController
       format.json { render json: @json}
     end
   end
-  # GET /listings/1
-  # GET /listings/1.json
+
   def show
     @listing = Listing.find(params[:id])
 
@@ -38,8 +36,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  # GET /listings/new
-  # GET /listings/new.json
   def new
     @listing = Listing.new
 
@@ -49,13 +45,10 @@ class ListingsController < ApplicationController
     end
   end
 
-  # GET /listings/1/edit
   def edit
     @listing = Listing.find(params[:id])
   end
 
-  # POST /listings
-  # POST /listings.json
   def create
     @listing = Listing.new(params[:listing])
 
@@ -70,8 +63,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  # PUT /listings/1
-  # PUT /listings/1.json
   def update
     @listing = Listing.find(params[:id])
 
@@ -86,8 +77,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  # DELETE /listings/1
-  # DELETE /listings/1.json
   def destroy
     @listing = Listing.find(params[:id])
     @listing.destroy
@@ -97,4 +86,5 @@ class ListingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
