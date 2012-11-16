@@ -1,3 +1,19 @@
 // Place all the styles related to the Listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.photo {
+	float: right;
+}
+
+.attributes {
+	float: left;
+}
+
+fieldset {
+	width:750px;
+	margin: auto auto auto auto;
+}
+
+.outer {
+	width: 800px;
+}

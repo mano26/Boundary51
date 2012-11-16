@@ -2,7 +2,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listing = Listing.all
+    @listings = Listing.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,19 +14,7 @@ class ListingsController < ApplicationController
     @address = Listing.find_by_id(params[:id])
   end
   
-  def results
-    @listing = Listing.all
-    @markers = '[
-                 {"description": "Boundary51", "title": "Boundary51", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
-                 {"lng": "-88", "lat": "42" }
-                ]'
-    @json = Listing.all.to_gmaps4rails
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @json}
-    end
-  end
+  
   # GET /listings/1
   # GET /listings/1.json
   def show
