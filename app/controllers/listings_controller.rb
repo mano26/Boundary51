@@ -2,17 +2,12 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-<<<<<<< HEAD
-    @listings = Listing.all
     @markers = '[
                  {"description": "", "title": "", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
                  {"lng": "-88", "lat": "42" }
                 ]'
     @json = Listing.all.to_gmaps4rails
-=======
-
->>>>>>> 6e8a4fbdc9ba24e6208b09bb089d9fbb595dc4d4
-    respond_to do |format|
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @listings }
     end
@@ -23,26 +18,7 @@ class ListingsController < ApplicationController
     @address = Listing.find_by_id(params[:id])
   end
   
-<<<<<<< HEAD
-  
-  # GET /listings/1
-  # GET /listings/1.json
-=======
-  def results
-    @listing = Listing.all
-    @markers = '[
-                 {"description": "Boundary51", "title": "Boundary51", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
-                 {"lng": "-88", "lat": "42" }
-                ]'
-    @json = Listing.all.to_gmaps4rails
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @json}
-    end
-  end
-
->>>>>>> 6e8a4fbdc9ba24e6208b09bb089d9fbb595dc4d4
   def show
     @listing = Listing.find(params[:id])
 
