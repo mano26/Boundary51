@@ -1,6 +1,8 @@
 Demo::Application.routes.draw do
 
 
+  root :to => 'Listings#index'
+
   get '/login' => 'sessions#new', as: 'login'
   get '/logout' => 'sessions#logout', as: 'logout'
   post '/sessions' => 'sessions#create'
@@ -11,6 +13,5 @@ Demo::Application.routes.draw do
   resources :landings
   resources :listings
 
-  root to: 'listings#index'
 
 end
