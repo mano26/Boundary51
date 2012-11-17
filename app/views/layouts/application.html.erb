@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+	<ul>
+
+		<% if session["user_id"] %>
+		Hello, <%= User.find(session[:user_id]).name %>!
+			<%= link_to "Sign Out", "/logout" %>
+		<% else %>
+			<%= link_to "Sign In", "/login" %>
+		<% end %>
+	</ul>
+</nav>
 
 <%= yield %>
 <%= yield :scripts %>
