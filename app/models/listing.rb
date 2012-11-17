@@ -5,9 +5,15 @@ class Listing < ActiveRecord::Base
 
 
    acts_as_gmappable :process_geocoding => false
+   geocoded_by :address
+
+   after_validation :geocode
+
+   
+
    
   def gmaps4rails_address
-     "#{self.latitude}, #{self.longitude}"
+     "#{self.address}"
   end
   
   
