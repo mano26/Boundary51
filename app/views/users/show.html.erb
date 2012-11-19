@@ -10,16 +10,12 @@
   <%= @user.name %>
 </p>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ed0479defe5947eccf111a4ed2e676fcc444f83d
-
 <p>
   <b>Admin:</b>
   <%= @user.admin %>
 </p>
 
+<% if @user.wishlists.exists? %>
 <p>
 	<b>Wishlist:</b>
 	<div>
@@ -31,6 +27,7 @@
    <p>Available <%= wishlist.listing.available %></p>
    <p>Rent $<%= wishlist.listing.price %></p>
 </div>
+<% end %>
 
 <div class='photo'>
     <p><%= image_tag(wishlist.listing.photo_url)%>
@@ -38,4 +35,7 @@
    	<%= link_to 'Show', listing_url %> |
 		<%= link_to 'Edit', edit_listing_path(wishlist.listing) %> |
 		<%= link_to 'Back', listings_path %>
-		<% end %>
+	<% end %>
+  <% else %>
+  <b>Wishlist:</b>
+  <p>You haven't added any listings to your wishlist yet.</p>
