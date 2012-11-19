@@ -10,13 +10,32 @@
   <%= @user.name %>
 </p>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ed0479defe5947eccf111a4ed2e676fcc444f83d
 
 <p>
   <b>Admin:</b>
   <%= @user.admin %>
 </p>
 
+<p>
+	<b>Wishlist:</b>
+	<div>
+	<p><% @user.wishlists.each do |wishlist|  %></p>
+   <p><%= wishlist.listing.unit_description %></p>
+   <p><%= wishlist.listing.address %></p>
+   <p><%= wishlist.listing.beds %> Beds</p>
+   <p><%= wishlist.listing.bath %> Baths</p>
+   <p>Available <%= wishlist.listing.available %></p>
+   <p>Rent $<%= wishlist.listing.price %></p>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class='photo'>
+    <p><%= image_tag(wishlist.listing.photo_url)%>
+</div>
+   	<%= link_to 'Show', listing_url %> |
+		<%= link_to 'Edit', edit_listing_path(wishlist.listing) %> |
+		<%= link_to 'Back', listings_path %>
+		<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121117010031) do
+ActiveRecord::Schema.define(:version => 20121117045803) do
 
   create_table "landings", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(:version => 20121117010031) do
     t.boolean  "admin"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "wishlists", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "listing_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
