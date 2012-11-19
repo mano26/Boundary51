@@ -13,39 +13,31 @@
 
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :placeholder => "street,city,state,zip" %>
   </div>
   <div class="field">
     <%= f.label :unit_number %><br />
-    <%= f.text_field :unit_number %>
+    <%= f.text_field :unit_number, :placeholder => 'ex. apt 102' %>
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= f.text_field :city, :placeholder => 'ex. Chicago' %>
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= f.text_field :state, :placeholder => 'ex. Il' %>
   </div>
   <div class="field">
     <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br />
-    <%= f.text_field :country %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
+    <%= f.text_field :zip, :placeholder => 'ex. 60606' %>
   </div>
   <div class="field">
     <%= f.label :available %><br />
     <%= f.date_select :available %>
+  </div>
+  <div class="field">
+    <%= f.label :beds %><br />
+    <%= f.text_field :beds %>
   </div>
   <div class="field">
     <%= f.label :bath %><br />
@@ -65,7 +57,7 @@
   </div>
   <div class="field">
     <%= f.label :parking %><br />
-    <%= f.text_field :parking %>
+    <%= f.text_field :parking, :placeholder => 'ex. garage, covered' %>
   </div>
   <div class="field">
     <%= f.label :cats %><br />
@@ -81,7 +73,7 @@
   </div>
   <div class="field">
     <%= f.label :showing_instructions %><br />
-    <%= f.text_area :showing_instructions %>
+    <%= f.text_area :showing_instructions, :placeholder => 'ex. Call Joe at Kane Management' %>
   </div>
   <div class="field">
     <%= f.label :unit_description %><br />

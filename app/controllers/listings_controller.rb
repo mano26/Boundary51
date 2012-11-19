@@ -1,11 +1,21 @@
 class ListingsController < ApplicationController
+  before_filter :require_admin, :only => [:create, :destroy, :update, :edit]
+
+  def require_admin
+    user = User.find_by_id(session[:user_id])
+    if !user.present? || !user.admin
+      redirect_to listings_url, :notice => 'Must be admin.'
+    end
+  end
 
   def index
     @listings = Listing.all
-    @markers = '[
-                 {"description": "", "title": "", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
-                 {"lng": "-88", "lat": "42" }
-                ]'
+    @markers = Listing.all.to_gmaps4rails
+
+    #  @markers = '[
+    # #              {"description": "Your results", "title": "", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},
+    # #              {"lng": "-88", "lat": "42" }
+    # #             ]'
     @json = Listing.all.to_gmaps4rails
       respond_to do |format|
       format.html # index.html.erb
