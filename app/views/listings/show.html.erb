@@ -104,6 +104,13 @@
   <b>Heat included:</b>
   <%= @listing.heat_included %>
 </p>
+<p><%= simple_form_for @wishlist do |f| %></p>
+   <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+   <%= f.hidden_field :listing_id, value: "#{@listing.id}" %>
+   <%= f.submit 'Add to My Wishlist' %>
+
+
+    <% end %>
 
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |

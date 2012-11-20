@@ -31,6 +31,7 @@ class ListingsController < ApplicationController
   
 
   def show
+    @wishlist = Wishlist.new
     @listing = Listing.find(params[:id])
 
     respond_to do |format|
