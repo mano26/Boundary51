@@ -27,7 +27,7 @@
    <p>Available <%= wishlist.listing.available %></p>
    <p>Rent $<%= wishlist.listing.price %></p>
 </div>
-<% end %>
+
 
 <div class='photo'>
     <p><%= image_tag(wishlist.listing.photo_url)%>
@@ -35,6 +35,7 @@
    	<%= link_to 'Show', listing_url %> |
 		<%= link_to 'Edit', edit_listing_path(wishlist.listing) %> |
 		<%= link_to 'Back', listings_path %>
+    <% end %>
 	<% end %>
   <% else %>
   <b>Wishlist:</b>

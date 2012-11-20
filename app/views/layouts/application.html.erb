@@ -9,7 +9,7 @@
 <body>
 <nav>
 	<ul>
-
+		<%= link_to 'Home', root_url %> |
 		<% if session["user_id"] %>
 		Hello, <%= User.find(session[:user_id]).name %>!
 			<%= link_to "Sign Out", "/logout" %> |

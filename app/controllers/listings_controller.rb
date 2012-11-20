@@ -11,6 +11,7 @@ class ListingsController < ApplicationController
   def index
     @listings = Listing.all
     @markers = Listing.all.to_gmaps4rails
+    @wishlist = Wishlist.new
 
     #  @markers = '[
     # #              {"description": "Your results", "title": "", "sidebar": "", "lng": "-87.63", "lat": "41.90", "picture": "", "width": "", "height": ""},

@@ -7,6 +7,8 @@ Demo::Application.routes.draw do
   get '/logout' => 'sessions#logout', as: 'logout'
   post '/sessions' => 'sessions#create'
 
+  resources :wishlists
+
   
   resources :users
 
