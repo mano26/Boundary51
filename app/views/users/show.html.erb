@@ -32,11 +32,11 @@
 <div class='photo'>
     <p><%= image_tag(wishlist.listing.photo_url)%>
 </div>
-   	<%= link_to 'Show', listing_url %> |
+   	<%= link_to 'Full Listing', listing_url(wishlist.listing) %> |
 		<%= link_to 'Edit', edit_listing_path(wishlist.listing) %> |
-		<%= link_to 'Back', listings_path %>
+    <%=link_to 'Remove From My Wish List', wishlist, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-	<% end %>
   <% else %>
   <b>Wishlist:</b>
   <p>You haven't added any listings to your wishlist yet.</p>
+  <% end %>

@@ -27,4 +27,13 @@ class WishlistsController < ApplicationController
 	
 	end
 
+ def destroy
+    @wishlist = Wishlist.find(params[:id])
+    @wishlist.destroy
+
+    respond_to do |format|
+      format.html { redirect_to "/users/#{session[:user_id]}" }
+      format.json { head :no_content }
+    end
+  end
 end
