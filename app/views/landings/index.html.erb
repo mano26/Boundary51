@@ -1,5 +1,12 @@
 <h1>Listing landings</h1>
-
+<div class='map_2'>
+<%= gmaps({
+        "map_options" => { "type" => "ROADMAP", "center_longitude" => -87.63, "center_latitude" => 41.90, "zoom" => 13, "auto_adjust" => true},
+        "markers" => { "data" => @markers }
+        })
+        %>
+      
+</div>
 <table>
   <tr>
     <th></th>

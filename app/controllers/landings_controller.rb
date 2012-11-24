@@ -3,7 +3,9 @@ class LandingsController < ApplicationController
   # GET /landings.json
   def index
     @landings = Landing.all
-
+    @listings = Listing.all
+    @markers = Listing.all.to_gmaps4rails
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @landings }

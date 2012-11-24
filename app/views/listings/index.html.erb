@@ -11,31 +11,30 @@
 
 
 <div class='page'>
-<fieldset class='outer'>
-    <legend>Your Results</legend>
-
-<%  @listings.each do |listing| %>
+  <div class='centerblock'>
+    <fieldset class='outer'>
+      <legend>Your Results</legend>
+      <%  @listings.each do |listing| %>
     <fieldset>
-<div class='attributes'>
-   <p><%= listing.unit_description %></p>
-   <p><%= listing.address %></p>
-   <p><%= listing.beds %> Beds</p>
-   <p><%= listing.bath %> Baths</p>
-   <p>Available <%= listing.available %></p>
-   <p>Rent $<%= listing.price %></p>
-</div>
+      <div class='attributes'>
+       <p><%= listing.unit_description %></p>
+       <p><%= listing.address %></p>
+       <p><%= listing.beds %> Beds</p>
+       <p><%= listing.bath %> Baths</p>
+       <p>Available <%= listing.available %></p>
+       <p>Rent $<%= listing.price %></p>
+      </div>
 
 <div class='photo'>
-    <p><%= image_tag(listing.photo_url)%>
+    <p><%=link_to image_tag(listing.photo_url), listing%>
 </div>
-    <%= link_to 'Show', listing %>
-   
-    
     <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
     <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </fieldset>
 <% end %>
 </fieldset>
+  </div>
+</div>
 
 <br />
 <div class='map'>

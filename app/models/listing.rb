@@ -19,5 +19,9 @@ class Listing < ActiveRecord::Base
      "#{self.address}"
   end
   
+  def gmaps4rails_infowindow
+       "<img src=\"#{self.photo_url}\"> #{self.address} beds #{self.beds} baths #{self.bath} rent $#{self.price}"
+     	
+    end
   
-end
+end 
