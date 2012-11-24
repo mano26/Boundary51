@@ -16,14 +16,24 @@
       <legend>Your Results</legend>
       <%  @listings.each do |listing| %>
     <fieldset>
-      <div class='attributes'>
-       <p><%= listing.unit_description %></p>
-       <p><%= listing.address %></p>
-       <p><%= listing.beds %> Beds</p>
-       <p><%= listing.bath %> Baths</p>
-       <p>Available <%= listing.available %></p>
-       <p>Rent $<%= listing.price %></p>
-      </div>
+
+
+<div class='attributes'>
+   <p><%= listing.unit_description %></p>
+   <p><%= listing.address %></p>
+   <p><%= listing.beds %> Beds</p>
+   <p><%= listing.bath %> Baths</p>
+   <p>Available <%= listing.available %></p>
+   <p>Rent $<%= listing.price %></p>
+   <p><%= simple_form_for @wishlist do |f| %></p>
+   <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+   <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
+   <%= f.submit 'Add To My Wish List' %>
+
+
+    <% end %>
+</div>
+
 
 <div class='photo'>
     <p><%=link_to image_tag(listing.photo_url), listing%>

@@ -9,18 +9,24 @@
 <body>
 <nav>
 	<ul>
-
+		<%= link_to 'Home', root_url %> |
 		<% if session["user_id"] %>
 		Hello, <%= User.find(session[:user_id]).name.capitalize %>!
 			<%= link_to "Sign Out", "/logout" %> |
-			<%= link_to 'My Profile', user_url(session[:user_id]) %> |
+			<%= link_to 'My Profile', user_url(session[:user_id]) %> 
 		<% else %>
+
 			<%= link_to "Sign In", "/login" %> |
 			<%= link_to 'Sign Up!', new_user_url %>
 			<% end %>
 			<%= link_to 'Home', root_url %> |
 			<%= link_to "Listings", listings_url %> |
 			
+
+			<%= link_to "Sign In", "/login" %> | <%= link_to 'Sign Up!', new_user_url %>
+		<% end %>
+		
+
 	</ul>
 
 
