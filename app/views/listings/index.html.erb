@@ -49,7 +49,7 @@
 <br />
 <div class='map'>
 <%= gmaps({
-        "map_options" => { "type" => "ROADMAP", "center_longitude" => -87.63, "center_latitude" => 41.90, "zoom" => 13, "auto_adjust" => true},
+        "map_options" => { "type" => "ROADMAP", 'detect_location' => true , 'center_on_user' => true , "zoom" => 13, "auto_adjust" => false },
         "markers" => { "data" => @markers }
         })
         %>
