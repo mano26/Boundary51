@@ -15,5 +15,8 @@ Demo::Application.routes.draw do
   resources :landings
   resources :listings
 
+  get '/home' => 'landings#home'
+  get '/listings-dev' => 'landings#listings'
+
 
 end
