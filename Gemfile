@@ -25,6 +25,11 @@ gem 'gmaps4rails'
 gem 'pry'
 gem 'geocoder'
 gem 'simple_form'
+gem "susy"
+gem 'compass', '>= 0.12.2'
+gem 'compass-rails', '>= 1.0.3'
+gem 'sassy-buttons'
+
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 # To use ActiveModel has_secure_password

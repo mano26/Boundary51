@@ -1,4 +1,6 @@
 class LandingsController < ApplicationController
+
+  layout false, :only => [:home, :listings]
   # GET /landings
   # GET /landings.json
   def index

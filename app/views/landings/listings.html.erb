@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo</title>
+  <script type="text/javascript" src="/assets/jquery_1_8_3.js"></script>
+  <script type="text/javascript" src="/assets/jquery_1_9_1.js"></script>
+  <script type="text/javascript" src="/assets/slide.js"></script>
+  <%= stylesheet_link_tag    "styles", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+</head>
+<body>
+  </script>
+<div class="container">
+<header>
+  <div class="logo">Logo</div>
+  <nav>
+      <ul>
+      <li><a href="#">Find Apartment</a></li>
+      <li><a href="#">My Favorites</a></li>
+      <li><a href="#">Wish List</a></li>
+      <li><a href="#">List Apartment</a></li>
+    </ul>
+  </nav>
+</header>
+  <section id="wrapper">
+    <div class='search'>
+  <form id="searchbox" action="">
+    <input id="search" type="text" class="searchbar" placeholder="City, Neighborhood, Zip">&nbsp&nbsp #BEDS + - &nbsp&nbsp <input id="search" type="text" class="bedbathbar" placeholder="Beds"> &nbsp&nbsp&nbsp&nbsp #BATHS + - &nbsp&nbsp <input id="search" type="text" class="bedbathbar" placeholder="Baths"> &nbsp&nbsp RENT <----O-----O----> &nbsp&nbsp&nbsp&nbsp
+    <input id="submit" type="submit" class="btn-search" value="Find Apartments">
+  </form>
+</div>
+    <div class="options">
+      <div class="optionhead"><div id="option-arrow" class="arrow-left"><a href="#" class="arr-left" onclick="slidePaneloption('open')"><</a><a href="#" class="arr-right" onclick="slidePaneloption('close')">></a></div></div>
+      <div class="optionbody">
+      <table>
+        <tr>
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><input type="checkbox" name="row-1" data-col="1"></td>
+            <td><input type="checkbox" name="row-1" data-col="2"></td>
+            <td><input type="checkbox" name="row-1" data-col="3"></td>
+        </tr>
+        <tr>
+            <td>Features</td>
+            <td><input type="checkbox" name="row-2" data-col="1"></td>
+            <td><input type="checkbox" name="row-2" data-col="2"></td>
+            <td><input type="checkbox" name="row-2" data-col="3"></td>
+        </tr>
+        <tr>
+            <td>List Date</td>
+            <td><input type="checkbox" name="row-3" data-col="1"></td>
+            <td><input type="checkbox" name="row-3" data-col="2"></td>
+            <td><input type="checkbox" name="row-3" data-col="3"></td>
+      </tr>
+              <tr>
+            <td>Pets</td>
+            <td><input type="checkbox" name="row-3" data-col="1"></td>
+            <td><input type="checkbox" name="row-3" data-col="2"></td>
+      </tr>
+    </table>
+  </div>
+    </div>
+    <div class="listings-set">
+      <div class="listing">
+      <div class="listhead"># of Results | Sort by: Rent Distance Availability</div>
+      <div class="listbody">
+        <div class="listholder">
+         <div class='list-photo'>
+        <img src="/assets/apt2.jpeg" class="listpic" alt="Photo" />
+         </div>
+         <div class="list-details">
+          <div class="list-desc">
+            <strong>Description:</strong> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem<br><br>
+            <strong>Address:</strong> 123 Main St, Chicago, IL 60601 Apt. 2B<br><br>
+            <strong>Beds:</strong> 2 |  <strong>Baths:</strong> 4
+         </div>
+       </div>
+         <div class="list-rent">
+            <strong>$2500</strong><br>
+           <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+           <span class="avail"><strong>Avl:</strong> 05/01/12</span>
+         </div>
+       </div>
+        <div class="listholder">
+         <div class='list-photo'>
+                <img src="/assets/apt1.jpeg" class="listpic" alt="Photo" />
+         </div>
+         <div class="list-details">
+          <div class="list-desc">
+            <strong>Description:</strong> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem<br><br>
+            <strong>Address:</strong> 123 Main St, Chicago, IL 60601 Apt. 2B<br><br>
+            <strong>Beds:</strong> 2 |  <strong>Baths:</strong> 4
+         </div>
+       </div>
+         <div class="list-rent">
+            <strong>$2500</strong><br>
+           <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+           <span class="avail"><strong>Avl:</strong> 05/01/12</span>
+         </div>
+       </div>
+                    <div class="listholder">
+         <div class='list-photo'>
+                <img src="/assets/apt1.jpeg" class="listpic" alt="Photo" />
+         </div>
+         <div class="list-details">
+          <div class="list-desc">
+            <strong>Description:</strong> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem<br><br>
+            <strong>Address:</strong> 123 Main St, Chicago, IL 60601 Apt. 2B<br><br>
+            <strong>Beds:</strong> 2 |  <strong>Baths:</strong> 4
+         </div>
+       </div>
+         <div class="list-rent">
+         <strong>$2500</strong><br>
+           <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+           <span class="avail"><strong>Avl:</strong> 05/01/12</span>
+         </div>
+       </div>
+                    <div class="listholder">
+         <div class='list-photo'>
+                <img src="/assets/apt1.jpeg" class="listpic" alt="Photo" />
+         </div>
+         <div class="list-details">
+          <div class="list-desc">
+            <strong>Description:</strong> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem<br><br>
+            <strong>Address:</strong> 123 Main St, Chicago, IL 60601 Apt. 2B<br><br>
+            <strong>Beds:</strong> 2 |  <strong>Baths:</strong> 4
+         </div>
+       </div>
+         <div class="list-rent">
+         <strong>$2500</strong><br>
+           <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+           <span class="avail"><strong>Avl:</strong> 05/01/12</span>
+         </div>
+       </div>
+                     <div class="listholder">
+         <div class='list-photo'>
+                <img src="/assets/apt1.jpeg" class="listpic" alt="Photo" />
+         </div>
+         <div class="list-details">
+          <div class="list-desc">
+            <strong>Description:</strong> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem<br><br>
+            <strong>Address:</strong> 123 Main St, Chicago, IL 60601 Apt. 2B<br><br>
+            <strong>Beds:</strong> 2 |  <strong>Baths:</strong> 4
+         </div>
+       </div>
+         <div class="list-rent">
+         <strong>$2500</strong><br>
+           <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+           <span class="avail"><strong>Avl:</strong> 05/01/12</span>
+         </div>
+       </div>
+     </div>
+       <div class="listfoot">Listings # 1 of 2</div>
+        </div>
+      <div class='list-map'>
+        <div class="maphead"><div id="map-arrow" class="arrow-left"><a href="#" class="mapleft" onclick="slidePanel('open')"><</a><a href="#" class="mapright" onclick="slidePanel('close')">></a></div></div>
+        <div class='map'><iframe id="mapframe" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Merchandise+Mart+Properties,+Inc.,+222+Merchandise+Mart+Plaza,+Chicago,+IL&amp;aq=0&amp;oq=merch&amp;sll=39.402244,-89.274902&amp;sspn=10.216592,19.753418&amp;ie=UTF8&amp;hq=Merchandise+Mart+Properties,+Inc.,+222+Merchandise+Mart+Plaza,+Chicago,+IL&amp;ll=41.888509,-87.635409&amp;spn=0.016613,0.032015&amp;t=m&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</div>
+  <footer>footer</footer>
+</body>
+</html>
