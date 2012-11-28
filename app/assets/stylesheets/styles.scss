@@ -13,29 +13,28 @@ html{
 	padding: 0;
 }
 body{
-	margin: 0 auto;
-  	background-image: url(../img/black_wood.jpg);
+	margin: 0;
+  	background-image: url(/assets/black_wood.jpg);
   	background-size: cover;
 	/*background: #240b07;*/
 	padding: 0;
 	height: 100%;
-	margin-bottom: -125px;
 }
 
 .container {
   @include container;
   @include susy-grid-background;
   @include rounded-corners(7px);
-  margin: 0 auto;
-  padding: 0;
-  height: 100%
+  height: 100%;
+  margin-bottom: -50px ;
 }
 
 header {
 	@include span-columns(12,12);
   	@include text-shadow(1px, 1px, 2px, #000);
 	height: 75px;
-	margin: 0 auto;
+	width: 100%;
+	padding: 0;
 	color: white;
 	font-weight: bold;
 }
@@ -46,32 +45,21 @@ header {
 	margin: 0 auto;
 }
 
-
-nav { @include span-columns(10,12);
-	  float: right;
-	  margin: 0 auto;
-	  }
-
-.navbar {
-	@include span-columns(7,10);
-	float: left;
-	margin: 0 auto;
-}
-
 .search {
 	@include span-columns(12,12);
+	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
 	@include text-shadow(1px, 1px, 1px, #ccc);
-	background-image: url(../img/irongrip.png);
+	background: lighten(#4ba3cc, 20px%);
 	margin: 0 auto;
-	color: white;
-	font-size: 10px;
+	color: #000;
+	font-size: 12px;
 	font-weight: bold;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
 .searchbar {
-	@include span-columns(2,12);
+	@include span-columns(2	,12);
 	@include rounded-corners(7px);
 	height: 20px;
 	padding: 2px;
@@ -80,14 +68,13 @@ nav { @include span-columns(10,12);
 
 .bedbathbar {
 	@include rounded-corners(7px);
-	width: 40px;
+	width: 50px;
 	height: 20px;
 	padding: 2px;
 	margin: 1px;
 }
 
 section {
-	@include rounded-corners(7px);
     border: solid 0px #0F0;
     border-style:none;
     width: auto;
@@ -98,8 +85,8 @@ section {
 }
 
 .btn-search {
-	@include flypink-button;
-	font-size: 12px;
+	@include sassy-button("matte", 5px, 19px, #cede85, #a7bf35, #fff, "inset");
+	font-size: 14px;
 }
 
 .login {
@@ -133,12 +120,14 @@ section {
 
 .optionbody {
 	@include rounded-corners(7px);
-	background-image: url(../img/irongrip.png);
+	background-image: url(/assets/fabric_plaid.png);
 	height: 100%;
-	min-height: 500px;
-	color: white;
-	opacity: .75;
+	min-height: 660px;
+	color: black;
 	font-weight: bold;
+   -moz-box-shadow: inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 10px #000000;
 }
 
 .listhead {
@@ -193,7 +182,7 @@ section {
 	float: right;
 	margin: 0 auto;
 	position: relative;
-	height: 600px;
+	height: 690px;
 }
 
 .list-photo {
@@ -227,13 +216,14 @@ section {
 .list-rent {
 	@include span-columns(1,6);
 	float: right;
-	margin:  auto;
+	margin: 15px auto;
 	font-size: 16px;
 	text-align: center;
 }
 
 .btn-rent {
-	@include flypink-button;
+	@include sassy-button("shiny", 5px, 12px, #e86a43);
+	@include sassy-button-style("inset", #e86a43);
 }
 
 .map-btns {
@@ -295,9 +285,9 @@ section {
 
 footer {
   	@include text-shadow(1px, 1px, 2px, #000);
-	height: 75px;
-	background-image: url(../img/hexabump.png);
-	color: #AFEAAA;
+	height: 50px;
+	background-image: url(/assets/wild_oliva.png);
+	color: #4ba3cc;
 	font-weight: bold;
 	@include span-columns(12,12);
   }
@@ -395,15 +385,15 @@ footer {
 }
 
 .ch-img-1 { 
-	background-image: url(../img/1.jpg);
+	background-image: url(/assets/1.jpg);
 }
 
 .ch-img-2 { 
-	background-image: url(../img/2.jpeg);
+	background-image: url(/assets/2.jpeg);
 }
 
 .ch-img-3 { 
-	background-image: url(../img/3.jpg);
+	background-image: url(/assets/3.jpg);
 }
 
 .ch-info h3 {
@@ -465,6 +455,209 @@ footer {
 	opacity: 1;
 }
 
+nav {
+	@include span-columns(10,12);
+	float: right;
+	float: right;
+	height: 40px;
+	margin-top: -20px;
+	padding: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	overflow: hidden;
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.75), 
+					 inset -1px -1px 0 #444;
+	-webkit-box-shadow: inset 1px 1px 2px #000, 
+						inset -1px -1px 0 #444;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.75), 
+				inset 0 -1px 0 rgba(255,255,255,0.15);
+}
+
+nav li { display: inline;	}
+
+nav li a {
+	@include rounded-corners(7px);
+	color: #8c8c8c;
+	font-weight: bold;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 5px;
+	text-align: center;
+	padding: 0 15px;
+	font-size: 12px;
+	text-shadow: -1px -1px #000;
+	text-transform: uppercase;
+	background-image:	-moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%),
+						url("/assets/nav-item-pattern.png");
+	background-image:	-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.1)), color-stop(100%,rgba(255,255,255,0))),
+						url("/assets/nav-item-pattern.png");
+	background-image:	-webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
+						url("/assets/nav-item-pattern.png");
+	background-image:	-o-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
+						url("/assets/nav-item-pattern.png");
+	background-image:	-ms-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
+						url("/assets/nav-item-pattern.png");
+	background-image:	linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
+						url("/assets/nav-item-pattern.png");
+	background-color: #343434;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.6), 
+					 inset 0 1px 0 rgba(255,255,255,0.15);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.6), 
+						inset 0 1px 0 rgba(255,255,255,0.15);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.6), 
+				inset 0 1px 0 rgba(255,255,255,0.15);
+	text-decoration: none;
+}
+	
+nav li.active a {
+	@include rounded-corners(7px);
+	background: #7f9b15 url("../images/noise.jpg") repeat 0 0;
+	background: url("/assets/noise.png") 0 0 repeat,
+				-moz-linear-gradient(top, #7c9911 0%, #829e1c 50%, #739102 51%, #7f9b15 100%);
+	background: url("/assets/noise.png") 0 0 repeat,
+				-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c9911), color-stop(50%,#829e1c), color-stop(51%,#739102), color-stop(100%,#7f9b15));
+	background: url("/assets/noise.png") 0 0 repeat,
+				-webkit-linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);
+	background: url("/assets/noise.png") 0 0 repeat,
+				-o-linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);
+	background: url("/assets/noise.png") 0 0 repeat,
+				-ms-linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);
+	background: url("/assets/noise.png") 0 0 repeat,
+				linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);	
+	color: #fff;
+	-moz-box-shadow:	inset 0 0 1px rgba(255,255,255,0.5), 
+						inset 0 1px 0 rgba(255,255,255,0.5), 
+						0 2px 4px rgba(0,0,0,0.6);
+	-webkit-box-shadow:	inset 0 0 1px rgba(255,255,255,0.5), 
+						inset 0 1px 0 rgba(255,255,255,0.5), 
+						0 2px 4px rgba(0,0,0,0.6);
+	box-shadow:	inset 0 0 1px rgba(255,255,255,0.5), 
+				inset 0 1px 0 rgba(255,255,255,0.5), 
+				0 2px 4px rgba(0,0,0,0.6);
+}
+
+nav li.contact a {
+	margin-right: 0;
+	-moz-border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+
+nav li a span {
+	background: transparent url("/assets/nav.png") 0 -23px no-repeat;
+	display: block;
+	text-indent: -9999px;
+	width: 53px;
+	height: 23px;
+	margin: 8px 0;
+	opacity: 1;
+}
+
+#contact {
+	background-image: url(/assets/creampaper.png);
+	margin-top: 50px;
+}
+	
+
+#contact a.button { 
+	background: #2e2e2e;
+	background: rgba(0,0,0,0.1);
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 5px 6px;
+	float: right;
+	margin-right: 25px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
+	}
+	
+	#contact a.button b {
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		text-indent: -9999px;
+		display: block;
+		width: 270px;
+		height: 70px;
+		background: #749302 url("../images/button-contact.png") no-repeat 50% 0;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(49%,rgba(255,255,255,0.15)), color-stop(49%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.01))),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-ms-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		margin: 0 auto;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.75);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.75);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 1px rgba(0,0,0,0.75);
+	}
+	
+	#contact a.button:hover b {
+		background: #789602 url("../images/button-contact.png") no-repeat 50% 100%;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(49%,rgba(255,255,255,0.15)), color-stop(49%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.01))),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-ms-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+	}
+	
+
+#contact p {
+	clear: both;
+	font-size: 28px;
+	text-align: center;
+	padding-top: 17px;
+	text-shadow: 0 -1px #000;
+	letter-spacing: -0.025em;
+}
+
+#homemain {
+	margin-top: 100px;
+}
 
 
 

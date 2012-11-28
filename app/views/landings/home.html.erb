@@ -9,8 +9,13 @@
   <script type="text/javascript" src="scripts/jquery_1_9_1.js"></script>
   <script type="text/javascript" src="scripts/slide.js"></script>
   <link rel="stylesheet" href="stylesheets/screen.css" />
+    <%= stylesheet_link_tag    "styles", :media => "all" %>
+  <%= javascript_include_tag "application" %>
 </head>
 <body>
+    <div class="container">
+    <header></header>
+    <div id="homemain">
                 <ul class="ch-grid">
                     <li>
                         <div class="ch-item">               
@@ -46,5 +51,17 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+            <section id="contact">
+                <h2>Find Your Dream Apartment</h2>
+                <input type="text"></input>
+                <a href="#" class="contact button">
+                    <b>Start Search</b>
+                </a>
+                <p>...</p>
+            </section>
+            </div>
+        </div>
+        <footer></footer>
 </body>
 </html>
