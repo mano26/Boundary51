@@ -1,28 +1,11 @@
-<h1>Listing landings</h1>
-<div class='map_2'>
-<%= gmaps({
-        "map_options" => { "type" => "ROADMAP", "center_longitude" => -87.63, "center_latitude" => 41.90, "zoom" => 13, "auto_adjust" => true},
-        "markers" => { "data" => @markers }
-        })
-        %>
-      
+<div class='container_12'>
+  <div class='grid_12'>
+    <%= gmaps({
+            "map_options" => { "type" => "ROADMAP", 'detect_location' => true, 'center_on_user' => true, "zoom    " => 15, "auto_adjust" => false},
+            "markers" => { "data" => @markers }})%>
+  </div>   
 </div>
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @landings.each do |landing| %>
-  <tr>
-    <td><%= link_to 'Show', landing %></td>
-    <td><%= link_to 'Edit', edit_landing_path(landing) %></td>
-    <td><%= link_to 'Destroy', landing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+  
 
 <%= link_to 'New Landing', new_landing_path %>

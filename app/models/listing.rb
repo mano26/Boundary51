@@ -13,7 +13,13 @@ class Listing < ActiveRecord::Base
   after_validation :geocode
 
    
-
+def self.search(search)
+  if search
+   find(:all, :conditions => ['name Like ?', "%#{params[:search]}"])
+  else
+    find(:all)
+  end
+end
    
   def gmaps4rails_address
      "#{self.address}"

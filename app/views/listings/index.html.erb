@@ -1,9 +1,15 @@
 <div class='conatainer_12'>
 <div class='grid_1'>
-    <form id="searchbox" action="">
+  <%= form_tag listings_path, :method => 'get' do %>
+<p>
+  <%= text_field_tag :search, params[:search]%>
+  <%= submit_tag 'search', :name => nil %>
+</p>
+<% end %>
+    <!-- <form id="searchbox" action="">
     <input id="search" type="text" placeholder="City, Neighborhood, Zip">
     <input id="submit" type="submit" value="Search">
-</form>
+</form> -->
 </div>
 <!-- searchbox -->
     
