@@ -7,7 +7,7 @@ class LandingsController < ApplicationController
     @landings = Landing.all
     @listings = Listing.all
     @markers = Listing.all.to_gmaps4rails
-    
+    @json = Listing.all.to_gmaps4rails
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @landings }

@@ -1,0 +1,62 @@
+<div class='conatainer_12'>
+<div class='grid_1'>
+  <%= form_tag listings_path, :method => 'get' do %>
+<p>
+  <%= text_field_tag :search, params[:search]%>
+  <%= submit_tag 'search', :name => nil %>
+</p>
+<% end %>
+    <!-- <form id="searchbox" action="">
+    <input id="search" type="text" placeholder="City, Neighborhood, Zip">
+    <input id="submit" type="submit" value="Search">
+</form> -->
+</div>
+<!-- searchbox -->
+    
+<!-- listing results -->
+<div class='grid_6'>
+  <div class='centerblock'>
+    <fieldset class='outer'>
+      <legend>Your Results</legend>
+      <%  @listings.each do |listing| %>
+    <fieldset>
+
+
+  <div class='attributes'>
+      <p><%= listing.unit_description %></p>
+      <p><%= listing.address %></p>
+      <p><%= listing.beds %> Beds</p>
+      <p><%= listing.bath %> Baths</p>
+      <p>Available <%= listing.available %></p>
+      <p>Rent $<%= listing.price %></p>
+      <p><%= simple_form_for @wishlist do |f| %></p>
+      <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+      <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
+      <%= f.submit 'Add To My Wish List' %>
+      <% end %>
+  </div>
+
+<!-- unit photo -->
+  <div class='photo'>
+    <p><%=link_to image_tag(listing.photo_url), listing%>
+  </div>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </fieldset>
+<% end %>
+</fieldset>
+  </div>
+</div>
+
+  <div class='grid_5'>
+    <%= gmaps({
+            "map_options" => { "type" => "ROADMAP", 'detect_location' => true , 'center_on_user' => true , "    zoom" => 13, "auto_adjust" => false },
+            "markers" => { "data" => @markers }
+            })
+            %>
+      
+  </div>
+  </div>
+</div>
+
+  <!-- <%= link_to 'New Listing', new_listing_path %> -->

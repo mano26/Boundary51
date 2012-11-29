@@ -7,26 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-	<ul>
-		
-		<% if session["user_id"] %>
-		Hello, <%= User.find(session[:user_id]).name.capitalize %>!
-			<%= link_to 'Home', root_url %> |
-			<%= link_to "Sign Out", "/logout" %> |
-			<%= link_to 'My Profile', user_url(session[:user_id]) %> |
-			<%= link_to "Listings", listings_url %> |
-		<% else %>
-			<%= link_to 'Home', root_url %> |
-			<%= link_to "Sign In", "/login" %> |
-			<%= link_to 'Sign Up!', new_user_url %> |
-			
-			
-		<% end %>
-		</ul>
-</nav>
-
+	<div class="container">
+	<header>
+	  <div class="logo">REAL <span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></div>
+	  <nav>
+	  	<div class="navbar">
+	      <ul>
+		      <li><%= link_to "Listings", listings_url %></li>
+		      <li><a href="#">My Favorites</a></li>
+		      <li><a href="#">List Apartment</a></li>
+	      </ul>
+ 		</div>
+		<div class="login">
+		<ul>
+			<% if session["user_id"] %>
+			Hello, <%= User.find(session[:user_id]).name.capitalize %>!
+				<%= link_to 'Home', root_url %> |
+				<%= link_to "Sign Out", "/logout" %> |
+				<%= link_to 'My Profile', user_url(session[:user_id]) %> |
+				 |
+			<% else %>
+				<%= link_to 'Home', root_url %> |
+				<%= link_to "Sign In", "/login" %> |
+				<%= link_to 'Sign Up!', new_user_url %> |
+			<% end %>
+			</ul>
+		</div>
+  		</nav>
+	</header>
 <%= yield %>
 <%= yield :scripts %>
+	</div>
+	<footer>footer</footer>
 </body>
 </html>
