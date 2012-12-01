@@ -18,7 +18,7 @@
 		      <li><%= link_to "My Favorites", user_url(session[:user_id]) %></li>
 		      <li><%= link_to "List Apartment", new_listing_url %></li>
 	      </ul>
-	      		<div class="login">
+  		<div class="login">
 		<ul>
 			<% if session["user_id"] %>
 			Hello, <%= User.find(session[:user_id]).name.capitalize %>!

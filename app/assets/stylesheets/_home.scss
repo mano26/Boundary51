@@ -47,13 +47,13 @@ header.light a.trial {width: 105px; height: 72px; padding: 13px 20px 0; text-ali
 header.light a.trial:hover { color: #fff; }
 header.light a.colorbox { margin: 6px 0 0; color: #252525; padding: 0 17px; font-size: 14px; line-height: 37px; text-transform: uppercase; text-shadow: 0 1px 1px rgba(255,255,255,1); }
 
-footer.dark { background: #525252 }
+footer.dark { background: #525252; }
 footer.dark .shell { height: 59px; }
 footer.dark p { font-size: 12px; line-height: 58px; text-align: center; color: #fff; }
 footer.dark p a { color: #fff; text-decoration: none; }
 footer.dark p a:hover { text-decoration: underline; }
 
-footer.light { background: #ececec position: relative; z-index: 3; padding: 0 0 24px; width: 100%; }
+footer.light { background: #ececec; position: relative; z-index: 3; padding: 0 0 24px; width: 100%; }
 footer.light .shell { width: 902px; background: #b2d6ec; border: 1px solid #d5d5d5; box-shadow: 0 0 1px #e0eff7 inset; padding: 40px 72px 40px 38px; overflow: hidden; }
 footer.light .cloudmanic { width: 242px; height: 50px; }
 footer.light .socials { width: 160px; padding: 2px 0 0; }
@@ -74,27 +74,15 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #intro .theme-big-blue-button { margin: 0 0 12px; }
 
 #tour { margin: 715px 0 0; position: relative; width: 100%; z-index: 2; padding: 20px 0 0; box-shadow: 0 0 40px rgba(0,0,0,0.15); border-bottom: 1px solid #fff; }
-#tour .top { background: url(home-welcome.png) 50% 0 repeat-x; width: 100%; height: 75px; position: absolute; top: -50px; left: 0; }
-#tour .content { background: #ececec url(public-images/content.png); min-height: 718px; }
+#tour .top { width: 100%; height: 75px; position: absolute; top: -50px; left: 0; }
+#tour .content { background: #ececec; min-height: 718px; }
 #tour .shell { padding: 70px 9px 26px; }
 #tour h2 { font-size: 30px; text-align: center; padding: 0 0 24px; }
 #tour .slide-info h3 { font-size: 21px; padding: 0 0 4px; }
 #tour p { font-size: 18px; line-height: 24px; }
-#tour .macbook-air { background: url(public-images/macbook.png); width: 560px; height: 349px; padding: 40px 156px 71px 164px; position: relative; margin: 0 auto 25px; }
-#tour .macbook-air .shadow { width: 560px; height: 349px; position: absolute; top: 40px; left: 164px; z-index: 20; box-shadow: 0 0 10px rgba(0,0,0,0.5) inset; }
-#tour .macbook-air .slider-container { width: 560px; height: 349px; position: relative; overflow: hidden; }
-#tour .macbook-air ul { list-style: none; }
-#tour .macbook-air .slides li { float: left; width: 560px; height: 349px; position: relative; overflow: hidden; }
-#tour .macbook-air .prev,
-#tour .macbook-air .next { background: url(public-images/slider-arrows.png); width: 43px; height: 43px; position: absolute; top: 186px; }
-#tour .macbook-air .prev { left: -31px; background-position: 0 0; }
-#tour .macbook-air .prev:hover { left: -32px; }
-#tour .macbook-air .next { right: -31px; background-position: -43px 0; }
-#tour .macbook-air .next:hover { right: -32px; }
-#tour .macbook-air .blue-bar { background: #3e8ebf; background: -moz-linear-gradient(top, #3e8ebf 0%, #29709b 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e8ebf), color-stop(100%,#29709b)); background: -webkit-linear-gradient(top, #3e8ebf 0%,#29709b 100%); background: -o-linear-gradient(top, #3e8ebf 0%,#29709b 100%); background: -ms-linear-gradient(top, #3e8ebf 0%,#29709b 100%); background: linear-gradient(top, #3e8ebf 0%,#29709b 100%); width: 560px; height: 70px; text-align: center; position: absolute; bottom: 0; left: 0; font-size: 36px; color: #fff; line-height: 70px; padding: 0; }
 #tour .slide-info { text-align: center; display: none; color: #292929; width: 982px; }
 
-#integration { background: #ececec url(public-images/content.png); position: relative; z-index: 1; padding: 35px 0 62px; }
+#integration { background: #ececec; position: relative; z-index: 1; padding: 35px 0 62px; }
 #integration h2 { font-size: 30px; text-align: center; padding: 0 0 4px; }
 #integration p { font-size: 18px; text-align: center; padding: 0 0 10px; }
 #integration ul { list-style: none; }
@@ -103,7 +91,7 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #integration .logos > li + li { margin-left: 53px; }
 #integration .logos img { display: block; }
 
-#plans { background: #2a2a2a url(public-images/body.png); position: relative; z-index: 1; padding: 100px 0 45px; text-align: center; }
+#plans { background: #2a2a2a; position: relative; z-index: 1; padding: 100px 0 45px; text-align: center; }
 #plans h2 { font-size: 36px; line-height: 36px; color: #fff; }
 #plans h3 { font-size: 24px; line-height: 36px; color: #fff; padding: 0 0 28px; }
 #plans h4 { font-size: 16px; line-height: 32px; color: #fff; }
@@ -145,7 +133,7 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 
 #plans .large .box-foot { border-top: 1px solid #1c1c1c; }
 
-#mobile { border-top: 3px ridge #ddd; background: #2a2a2a url(public-images/body.png); position: relative; z-index: 2; box-shadow: 0 0 60px rgba(0,0,0,0.9), 0 0 200px rgba(0,0,0,0.9) inset; padding: 98px 0 40px; text-align: center; }
+#mobile { border-top: 3px ridge #ddd; background: #2a2a2a; position: relative; z-index: 2; box-shadow: 0 0 60px rgba(0,0,0,0.9), 0 0 200px rgba(0,0,0,0.9) inset; padding: 98px 0 40px; text-align: center; }
 #mobile h2 { font-size: 36px; color: #fff; padding: 0 0 18px; }
 #mobile h4 { font-size: 24px; line-height: 30px; color: #fff; padding: 30px; font-weight: normal; }
 #mobile p { font-size: 18px; line-height: 30px; color: #fff; padding: 0 0 30px; }
@@ -155,7 +143,7 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #mobile .col .theme-green-button3 { padding: 0 22px; font-size: 16px; }
 #mobile .entry { padding: 12px 0 0; }
 
-#more { background: #ececec url(public-images/content.png); position: relative; z-index: 3; }
+#more { background: #ececec; position: relative; z-index: 3; }
 #more h2 { font-size: 30px; line-height: 30px; }
 #more h4 { font-size: 18px; line-height: 24px; padding: 0 0 12px; }
 #more p { font-size: 21px; line-height: 30px; }
@@ -185,26 +173,26 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #page-head .video-box { width: 320px; margin: 0 0 34px 50px; text-align: center; }
 #page-head .vid-link { color: #b2d6ec; font-size: 12px; }
 #page-head .vid-link .preview { display: block; margin: 0 0 8px; width: 320px; position: relative; }
-#page-head .vid-link .overlay { background: url(public-images/ico-video.png) 50% 50% no-repeat; width: 100%; height: 100%; position: absolute; top: 0; left: 0; box-shadow: 0 0 30px rgba(0,0,0,.3) inset; }
+#page-head .vid-link .overlay { width: 100%; height: 100%; position: absolute; top: 0; left: 0; box-shadow: 0 0 30px rgba(0,0,0,.3) inset; }
 #page-head .vid-link img { display: block; }
 
 #page-head .big-light-button { background: #fefefe; background: -moz-linear-gradient(top, #fefefe 0%, #a7a7a7 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#a7a7a7)); background: -webkit-linear-gradient(top, #fefefe 0%,#a7a7a7 100%); background: -o-linear-gradient(top, #fefefe 0%,#a7a7a7 100%); background: -ms-linear-gradient(top, #fefefe 0%,#a7a7a7 100%); background: linear-gradient(top, #fefefe 0%,#a7a7a7 100%); border-radius: 3px; box-shadow: 0 3px 3px rgba(0,0,0,1); display: inline-block; margin-right: 15px; width: 202px; color: #555; text-shadow: 0 1px 0 #fff; }
 #page-head .big-light-button:hover { background: #dfdfdf; background: -moz-linear-gradient(top, #fefefe 0%, #8a8a8a 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#8a8a8a)); background: -webkit-linear-gradient(top, #fefefe 0%,#8a8a8a 100%); background: -o-linear-gradient(top, #fefefe 0%,#8a8a8a 100%); background: -ms-linear-gradient(top, #fefefe 0%,#8a8a8a 100%); background: linear-gradient(top, #fefefe 0%,#8a8a8a 100%); text-decoration: none; }
 #page-head .big-light-button .ico-apple,
 #page-head .big-light-button .ico-android { float: left; height: 86px; }
-#page-head .big-light-button .ico-apple { background: url(public-images/btn-logo-apple.png) 18px 0 no-repeat; padding-left: 82px; }
+#page-head .big-light-button .ico-apple { padding-left: 82px; }
 #page-head .big-light-button:hover .ico-apple { background-position: 18px -86px; }
-#page-head .big-light-button .ico-android { background: url(public-images/btn-logo-android.png) 18px 0 no-repeat; padding-left: 78px; }
+#page-head .big-light-button .ico-android { padding-left: 78px; }
 #page-head .big-light-button:hover .ico-android { background-position: 18px -86px; }
 #page-head .big-light-button .small { font-size: 18px; line-height: 24px; display: block; padding: 13px 0 0; }
 #page-head .big-light-button .large { font-size: 30px; line-height: 30px; display: block; }
 
-#main { background: #ececec url(public-images/content.png); }
+#main { background: #ececec }
 #main .shell { padding: 28px 0; }
 
 #sign-up { padding: 24px 0 0; }
 #sign-up h2 { font-size: 30px; color: #fff; padding: 0 0 24px; text-shadow: 1px 1px 0 #000; }
-#sign-up fieldset { background: #ececec url(public-images/content.png); width: 630px; border: 1px solid #fff; border-radius: 2px; display: block; box-shadow: 3px 3px 10px rgba(0,0,0,0.9); }
+#sign-up fieldset { background: #ececec; width: 630px; border: 1px solid #fff; border-radius: 2px; display: block; box-shadow: 3px 3px 10px rgba(0,0,0,0.9); }
 #sign-up fieldset.theme-padding-20 { width: 590px; }
 #sign-up fieldset h3 { font-size: 36px; line-height: 60px; background: #d5d5d5; padding: 0 20px; text-shadow: 0 1px 0 #fff; }
 #sign-up fieldset h4 { background: #d1d1d1; font-size: 18px; line-height: 30px; padding: 10px 20px; border-radius: 1px 1px 0 0; }
@@ -215,9 +203,9 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #sign-up .shell { overflow: hidden; }
 #sign-up .card-info .row { width: 280px; }
 #sign-up .card-info .wide { width: 520px; }
-#sign-up fieldset .ico-secure { background: url(public-images/ico-secure.png); width: 17px; height: 19px; position: absolute; top: 27px; left: 33px; }
+#sign-up fieldset .ico-secure { width: 17px; height: 19px; position: absolute; top: 27px; left: 33px; }
 #sign-up .card-logos { width: 248px; padding: 18px 0 0;  }
-#sign-up .card-logos span.notext { background-image: url(public-images/card-logos.png); height: 30px; margin: 0 0 10px; }
+#sign-up .card-logos span.notext { height: 30px; margin: 0 0 10px; }
 #sign-up .card-logos .visa { background-position: 0 0; width: 60px; }
 #sign-up .card-logos .visa.active { background-position: 0 -30px; width: 60px; }
 #sign-up .card-logos .mastercard { background-position: -60px 0; width: 56px; }
@@ -247,7 +235,7 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #sign-up aside .ico-secure { background: #fcfcfc; background: -moz-linear-gradient(top, #fcfcfc 0%, #989898 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#989898)); background: -webkit-linear-gradient(top, #fcfcfc 0%,#989898 100%); background: -o-linear-gradient(top, #fcfcfc 0%,#989898 100%); background: -ms-linear-gradient(top, #fcfcfc 0%,#989898 100%); background: linear-gradient(top, #fcfcfc 0%,#989898 100%); width: 36px; height: 36px; border-radius: 18px; box-shadow: 1px 1px 2px rgba(0,0,0,0.9); position: absolute; top: 4px; left: 12px; }
 #sign-up aside .ico-dollar span,
 #sign-up aside .ico-phone span,
-#sign-up aside .ico-secure span { background: url(public-images/circle-icons.png); width: 36px; height: 36px; display: block; }
+#sign-up aside .ico-secure span { width: 36px; height: 36px; display: block; }
 #sign-up aside .ico-dollar span { background-position: 0 0; }
 #sign-up aside .ico-phone span { background-position: 0 -36px; }
 #sign-up aside .ico-secure span { background-position: 0 -72px; }
@@ -266,8 +254,8 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 #sign-up .unsubscribe .theme-padding-20 > p { font-size: 18px; line-height: 24px; }
 #sign-up .unsubscribe textarea { font-family: 'ApexNewBook'; }
 
-#sign-up .error-message { background: url(public-images/error-msg.png); padding: 0 0 0 60px; width: 570px; margin: 0 0 20px; font-size: 14px; line-height: 48px; color: #ea1b22; position: relative; }
-#sign-up .error-message .icon { background: url(public-images/ico-error.png); width: 30px; height: 30px; position: absolute; top: 10px; left: 18px; }
+#sign-up .error-message { padding: 0 0 0 60px; width: 570px; margin: 0 0 20px; font-size: 14px; line-height: 48px; color: #ea1b22; position: relative; }
+#sign-up .error-message .icon { width: 30px; height: 30px; position: absolute; top: 10px; left: 18px; }
 
 #sign-up .success { text-align: center; }
 #sign-up .success h2 { padding: 0 0 5px; }
@@ -321,12 +309,12 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 
 .tooltip-entry { display: none; }
 
-.url-box { background: #ececec url(public-images/content.png); width: 630px; border: 1px solid #fff; border-radius: 2px; display: block; box-shadow: 3px 3px 10px rgba(0,0,0,0.9); margin-left: auto; margin-right: auto; }
+.url-box { background: #ececec; width: 630px; border: 1px solid #fff; border-radius: 2px; display: block; box-shadow: 3px 3px 10px rgba(0,0,0,0.9); margin-left: auto; margin-right: auto; }
 .url-box h4 { background: #d1d1d1; font-size: 16px; line-height: 30px; padding: 10px 20px; border-radius: 1px 1px 0 0; }
 .url-box p { font-size: 21px; }
 
 
-.ch-grid {
+  .ch-grid {
     margin: -50px 0 0 0;
     padding: 0;
     list-style: none;
