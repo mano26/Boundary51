@@ -52,12 +52,16 @@
     <%= f.number_field :landlord_id %>
   </div>
   <div class="field">
-    <%= f.label :laundry %><br />
-    <%= f.text_field :laundry %>
+    <%= f.label :in_unit_laundry %><br />
+    <%= f.check_box :in_unit_laundry %>
   </div>
   <div class="field">
-    <%= f.label :parking %><br />
-    <%= f.text_field :parking, :placeholder => 'ex. garage, covered' %>
+    <%= f.label :on_site_laundry %><br />
+    <%= f.check_box :on_site_laundry %>
+  </div>
+  <div class="field">
+    <%= f.label :parking_available %><br />
+    <%= f.check_box :parking_available %>
   </div>
   <div class="field">
     <%= f.label :cats %><br />
