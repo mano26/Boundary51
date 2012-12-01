@@ -12,19 +12,18 @@
 <body>
 <div class="container">
 	<header class="light">
-		<div class="logo"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></div>
+		<div class="logo"><a href="<% root_url %>"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></a></div> 
     	<section class="shell">
         	<nav class="theme-apex left">
 			      <%= link_to "Listings", listings_url %>
 			      <%= link_to "List Apartment", new_listing_url %>
 				<% if session["user_id"] %>
 				Hello, <%= User.find(session[:user_id]).name.capitalize %>
-					<%= link_to 'Home', root_url %>
 					<%= link_to "Sign Out", "/logout" %>
 					<%= link_to 'My Profile', user_url(session[:user_id]) %>
 					<%= link_to "My Favorites", user_url(session[:user_id]) %>
 				<% else %>
-					<%= link_to 'Home', root_url %> 
+
 					<%= link_to "Sign In", "/login" %> 
 					<%= link_to 'Sign Up', new_user_url %> 
 				<% end %>
