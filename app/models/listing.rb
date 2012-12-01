@@ -29,9 +29,9 @@ class Listing < ActiveRecord::Base
   #       end
   #     end
    
-def self.search(search)
+def self.search(search) 
   if search
-   find(:all, :conditions => ['name Like ?', "%#{params[:search]}"])
+   find(:all, :conditions => ['address Like ?', "%#{search}%"])
   else
     find(:all)
   end

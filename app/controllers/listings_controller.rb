@@ -10,9 +10,9 @@ class ListingsController < ApplicationController
 
 
   def index
-    @listings = Listing.all
+    
     @markers = Listing.all.to_gmaps4rails
-
+    @listings = Listing.search(params[:search])
     @wishlist = Wishlist.new
     @json = Listing.all.to_gmaps4rails
 
