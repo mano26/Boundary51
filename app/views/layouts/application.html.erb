@@ -22,10 +22,9 @@
 		<ul>
 			<% if session["user_id"] %>
 			Hello, <%= User.find(session[:user_id]).name.capitalize %>!
-				<%= link_to 'Home', root_url %> |
-				<%= link_to "Sign Out", "/logout" %> |
-				<%= link_to 'My Profile', user_url(session[:user_id]) %> |
-				 |
+				<%= link_to 'Home', root_url %>|
+				<%= link_to "Sign Out", "/logout" %>|
+				<%= link_to 'My Profile', user_url(session[:user_id]) %>|
 			<% else %>
 				<%= link_to 'Home', root_url %> |
 				<%= link_to "Sign In", "/login" %> |

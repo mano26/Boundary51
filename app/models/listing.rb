@@ -11,7 +11,8 @@ class Listing < ActiveRecord::Base
   geocoded_by :address
 
   after_validation :geocode
-  before_save :ensure_landlord_cant_dupe
+
+  validate :ensure_landlord_cant_dupe
 
   def ensure_landlord_cant_dupe
   if Listing.where(:address => self.address, :landlord_id => self.landlord_id, :unit_number => self.unit_number).exists?
