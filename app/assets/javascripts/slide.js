@@ -8,13 +8,17 @@ function slidePanel(action){
         var mainDvWidth = $('.list-details').outerWidth();
         var width = windowWidth - mainDvWidth;
 
-    if(action === 'open'){
+    if(action === 'close'){
         $('.listing').stop().animate({'width' : '35%'});
         $('.list-photo').stop().animate({'width' : '20%'});
-        $("#map-arrow").attr("class", "arrow-right");
+        $('#map-arrow').attr('class', 'arrow-right');
         $('.list-details').stop().animate({'width' : '50%'});
-        $('.list-rent').stop().animate({'width' : '20%'});
-        $('.list-map').stop().animate({'width' : '60%'}, function() {
+        $('.list-map').stop().animate({'width' : '60%'});
+        $('.gmaps4rails_map').attr({'width' : '100%'});
+        $('.map_container').attr({'width' : '100%'});
+        $('#maparr').attr('class', 'goright');
+        $("#maparr")[0].setAttribute("onclick","slidePanel('open')");
+        $('.list-rent').stop().animate({'width' : '20%'}, function() {
         });
         
     }else{
@@ -22,57 +26,60 @@ function slidePanel(action){
         $('.list-map').attr({'width' : '38%'});
         $('.listing').stop().animate({'width' : '58%'});
         $('.list-details').stop().animate({'width' : '47%'});
-        $("#map-arrow").attr("class", "arrow-left");
+        $('#map-arrow').attr('class', 'arrow-left');
+        $('#maparr').attr('class', 'goleft');
+        $("#maparr")[0].setAttribute("onclick","slidePanel('close')");
         $('.list-rent').stop().animate({'width' : '13%'});
         $('.list-map').stop().animate({'width' : '38%'});
         $('.list-photo').stop().animate({'width' : '30%'});
     }
 }
 
-$("a.arrleft").on("click", function(){
-    slidePanel('open');
-});
 
-setTimeout(function(){
-     hidePanel();
-}, 0);
+// setTimeout(function(){
+//      hidePanel();
+// }, 0);
 
-setTimeout(function(){
-    slidePanel('open');
-}, 0);
+// setTimeout(function(){
+//     slidePanel('open');
+// }, 0);
 
-setTimeout(function(){
-    slidePanel('close');
-}, 0);
+// setTimeout(function(){
+//     slidePanel('close');
+// }, 0);
 
 function slidePaneloption(action){
         var windowWidth = $(window).width();
         var mainDvWidth = $('.list-details').outerWidth();
         var width = windowWidth - mainDvWidth;
 
-    if(action === 'open'){
+    if(action === 'close'){
         $("#option-arrow").attr("class", "arrow-right");
+        $('#optarr').attr('class', 'goright');
+        $("#optarr")[0].setAttribute("onclick","slidePaneloption('open')");
         $('.listings-set').stop().animate({'width' : '98%'});
         $('.options').stop().animate({'width' : '2%'}, function() {
-        });
+        }); 
         
     }else{
 
         $("#option-arrow").attr("class", "arrow-left");
+        $('#optarr').attr('class', 'goleft');
+        $("#optarr")[0].setAttribute("onclick","slidePaneloption('close')");
         $('.listings-set').attr({'width' : '82.97872%'});
         $('.options').stop().animate({'width' : '14.89362%'});
         $('.listings-set').stop().animate({'width' : '82.97872%'});
     }
 }
 
-setTimeout(function(){
-     hidePanel();
-}, 0);
+// setTimeout(function(){
+//      hidePanel();
+// }, 0);
 
-setTimeout(function(){
-    slidePaneloption('open');
-}, 0);
+// setTimeout(function(){
+//     slidePaneloption('open');
+// }, 0);
 
-setTimeout(function(){
-    slidePaneloption('close');
-}, 0);
+// setTimeout(function(){
+//     slidePaneloption('close');
+// }, 0);
