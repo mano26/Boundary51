@@ -427,7 +427,7 @@ nav {
 
 .navbar {
 	@include span-columns(7,10);
-	margin-left: 29%;
+	margin-left: 0;
 }
 
 .navbar li { display: inline;}
@@ -520,7 +520,7 @@ nav {
 
 .login a {
 	text-decoration: none;
-	color: #ffffff;
+	color: #000000;
 }
 
 #contact {
