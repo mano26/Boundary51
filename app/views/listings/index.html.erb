@@ -65,10 +65,10 @@
                       <strong>Address:</strong> <%= listing.address %><br>
                       <strong>Beds:</strong> <%= listing.beds %> |  
                       <strong>Baths:</strong> <%= listing.bath %><br><br>
-                              <%= simple_form_for @wishlist do |f| %>
+                              <%= simple_form_for @wishlist, :remote => :true do |f| %>
                       <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
                       <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
-                      <%= f.submit 'Wish', :class=> 'btn-wish' %>
+                      <%= f.submit 'Add to wish list', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
                     <% end %>
                       <%= link_to 'Edit', edit_listing_path(listing) %>
                       <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>

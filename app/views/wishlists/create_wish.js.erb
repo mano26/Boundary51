@@ -1,0 +1,10 @@
+//$("#<%= dom_id(@listing) %>").fadeOut(1000)
+//$("#<%= dom_id(@listing) %>").replaceWith("Added to Wish List!")
+
+
+$(document).ready(function() {
+    $("#<%= dom_id(@listing) %>").fadeOut(500, function() {
+        var $newElement = $('<div id="new div">Added to Wish List!</div>');
+        $(this).replaceWith($newElement);
+    });
+});
