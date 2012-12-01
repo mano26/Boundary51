@@ -13,7 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
- $('.btn-wish').click(function () {
-	$(this).fadeOut();
-});

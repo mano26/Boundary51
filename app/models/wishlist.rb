@@ -4,5 +4,6 @@ class Wishlist < ActiveRecord::Base
   belongs_to :user
   belongs_to :listing
 
+  validates_presence_of :user
   
 end

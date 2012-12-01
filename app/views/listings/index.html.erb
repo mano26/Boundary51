@@ -80,10 +80,12 @@
                   </div>
                   </div>
                   <div class="list-rent">
-                               <%= simple_form_for @wishlist, :remote => :true do |f| %>
+                    <% if session[:user_id].present? %>
+                      <%= form_for @wishlist, :remote => :true do |f| %>
                       <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
                       <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
                       <%= f.submit 'Add to wish list', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
+                      <% end %>
                     <% end %>
                       <strong>$<%= listing.price %></strong><br>
                       <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
