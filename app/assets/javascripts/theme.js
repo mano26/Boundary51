@@ -25,12 +25,12 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.theme-colorbox').colorbox({
-		opacity: 0.7,
-		onComplete: function() {
-			$.colorbox.resize();
-		}
-	});
+	// $('.theme-colorbox').colorbox({
+	// 	opacity: 0.7,
+	// 	onComplete: function() {
+	// 		$.colorbox.resize();
+	// 	}
+	// });
 
 	if($('.theme-radio').length) 
 	{
