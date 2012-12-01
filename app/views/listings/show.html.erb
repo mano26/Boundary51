@@ -27,21 +27,24 @@
     <%= @listing.available %>
   </p>
   
-  
-  
   <p>
     <b>Landlord:</b>
     <%= @listing.landlord_id %>
   </p>
   
   <p>
-    <b>Laundry:</b>
-    <%= @listing.laundry %>
+    <b>In-Unit Laundry:</b>
+    <%= @listing.in_unit_laundry %>
+  </p>
+
+  <p>
+    <b>On-Site Laundry:</b>
+    <%= @listing.on_site_laundry %>
   </p>
   
   <p>
     <b>Parking:</b>
-    <%= @listing.parking %>
+    <%= @listing.parking_available %>
   </p>
   
   <p>
@@ -73,11 +76,17 @@
     <b>Utilities included:</b>
     <%= @listing.utilities_included %>
   </p>
+
+  <p>
+    <b>Parking description:</b>
+      <%= @listing.parking_description %>
+  </p>
   
   <p>
     <b>Heat included:</b>
     <%= @listing.heat_included %>
   </p>
+
 </div>
 
   <%= image_tag(@listing.photo_url)%>

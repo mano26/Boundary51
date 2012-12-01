@@ -9,7 +9,9 @@
   <b>Name:</b>
   <%= @user.name %>
 </p>
-
+<% if @user.admin %>
+<%= link_to 'Add New Listing', new_listing_url%>
+<% end %> 
 <% if @user.wishlists.exists? %>
 <p>
 	<b>Wishlist:</b>
