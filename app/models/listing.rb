@@ -13,7 +13,7 @@ class Listing < ActiveRecord::Base
   after_validation :geocode
 
   validate :ensure_landlord_cant_dupe
-  # validate :verify_address
+  #before_save :verify_address
 
 
   def ensure_landlord_cant_dupe
@@ -23,11 +23,11 @@ class Listing < ActiveRecord::Base
   end
 
   # def verify_address
-  #       if latitude.present? && longitude.present? 
-  #         else
-  #        errors.add(:base, "Must add real address!")
-  #       end
-  #     end
+  #          if !latitude.nil? && !longitude.nil?
+  #            else
+  #           errors.add(:base, "Must add real address!")
+  #          end
+  #        end
    
 def self.search(search) 
   if search
