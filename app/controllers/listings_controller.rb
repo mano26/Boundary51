@@ -15,6 +15,8 @@ class ListingsController < ApplicationController
     @listings = Listing.search(params[:search])
     @wishlist = Wishlist.new
     @json = Listing.all.to_gmaps4rails
+    
+    @user = User.find_by_id(session[:user_id])
 
       respond_to do |format|
       format.html # index.html.erb
