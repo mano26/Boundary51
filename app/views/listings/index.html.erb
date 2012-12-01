@@ -108,8 +108,7 @@
           </div>
           <div class='map'>  
             <%= gmaps({
-									"map_options" => @map_options
-                  })
+									"map_options" => @map_options,"markers" => { "data" => @markers}})
 
                 %>
           </div>

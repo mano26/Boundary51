@@ -28,7 +28,7 @@ class ListingsController < ApplicationController
 
     search = Geocoder.search(params[:search])
 
-    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 12, "auto_adjust" => false,'center_on_user' => false,"markers" => { "data" => @markers}}
+    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 12, "auto_adjust" => false,'center_on_user' => false}
 
     if search.present?
       @location = search.first.geometry["location"]
