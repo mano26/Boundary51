@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(:version => 20121117231701) do
     t.float    "bath"
     t.text     "building_description"
     t.integer  "landlord_id"
-    t.string   "laundry"
-    t.string   "parking"
     t.boolean  "cats"
     t.boolean  "dogs"
     t.integer  "price"
@@ -47,6 +45,10 @@ ActiveRecord::Schema.define(:version => 20121117231701) do
     t.string   "photo_url"
     t.float    "lat"
     t.float    "lng"
+    t.boolean  "in_unit_laundry"
+    t.boolean  "on_site_laundry"
+    t.boolean  "parking_available"
+    t.text     "parking_description"
   end
 
   create_table "sessions", :force => true do |t|
