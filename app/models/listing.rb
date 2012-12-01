@@ -11,7 +11,13 @@ class Listing < ActiveRecord::Base
   geocoded_by :address
 
   after_validation :geocode
+  before_save :ensure_landlord_cant_dupe
 
+  def ensure_landlord_cant_dupe
+  if Listing.where(:address => self.address, :landlord_id => self.landlord_id, :unit_number => self.unit_number).exists?
+    errors.add(:base, "Can't add the same listing twice!")
+    end
+  end
    
 def self.search(search)
   if search
