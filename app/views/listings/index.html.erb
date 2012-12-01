@@ -3,6 +3,7 @@
         <form id="searchbox" action="">
           <%= form_tag listings_path, :method => 'get' do %>
           <!-- search bar id is in text field tag -->
+
           <%= text_field_tag :search, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
           <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Beds'%>
           <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
@@ -58,7 +59,8 @@
     <div class="listings-set">
         <div class="listing">
             <div class="listhead"> 
- <form id="searchbox" action="">     
+ <form id="searchbox" action="">
+                
         </form>
               # of Results | Sort by: Rent Distance Availability</div>
             <div class="listbody">
@@ -102,10 +104,11 @@
               </a>
             </div>
           </div>
-          <div class='map'>   
+          <div class='map'>  
             <%= gmaps({
-                  "map_options" => { "type" => "ROADMAP", 'detect_location' => true , 'center_on_user' => true , "zoom" => 13, "auto_adjust" => false },"markers" => { "data" => @markers }
+									"map_options" => @map_options
                   })
+
                 %>
           </div>
       </div>

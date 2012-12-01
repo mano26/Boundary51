@@ -31,7 +31,7 @@ class Listing < ActiveRecord::Base
    
 def self.search(search) 
   if search
-   find(:all, :conditions => ['address Like ?', "%#{search}%"])
+   find(:all, :conditions => ['city Like ?', "%#{search}%"])
   else
     find(:all)
   end

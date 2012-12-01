@@ -16,7 +16,22 @@ class ListingsController < ApplicationController
     @wishlist = Wishlist.new
     @json = Listing.all.to_gmaps4rails
 
-      respond_to do |format|
+    search = Geocoder.search(params[:search])
+
+    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 12, "auto_adjust" => false,'center_on_user' => false,"markers" => { "data" => @markers}}
+
+    if search.present?
+      @location = search.first.geometry["location"]
+      @map_options['center_latitude'] = @location["lat"]
+      @map_options['center_longitude'] = @location["lng"]
+    else
+      
+      @map_options['center_on_user'] = true
+      @map_options['detect_location'] = true
+      @map_options['auto_adjust'] = true
+    end
+
+    respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @listings }
     end
