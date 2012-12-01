@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Demo</title>
+<html lang="en" class=" js cssanimations csstransforms csstransforms3d csstransitions"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>TRANSPARENT</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-	<header>
-	  <div class="logo"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></div>
-	  <nav>
-	  	<div class="navbar">
-	      <ul>
-		      <li><%= link_to "Listings", listings_url %></li>
-		      <li><a href="#">Saved Searches</a></li>
-		      <li><%= link_to "List Apartment", new_listing_url %></li>
-	      </ul>
-  		<div class="login">
-		<ul>
-			<% if session["user_id"] %>
-			Hello, <%= User.find(session[:user_id]).name.capitalize %>!
-				<%= link_to 'Home', root_url %>|
-				<%= link_to "Sign Out", "/logout" %>|
-				<%= link_to 'My Profile', user_url(session[:user_id]) %>|
-				<%= link_to "My Favorites", user_url(session[:user_id]) %>
-			<% else %>
-				<%= link_to 'Home', root_url %> |
-				<%= link_to "Sign In", "/login" %> |
-				<%= link_to 'Sign Up!', new_user_url %> |
-			<% end %>
-			</ul>
-		</div>
- 		</div>
-  		</nav>
-	</header>
+<div class="container">
+	<header class="light">
+		<div class="logo"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></div>
+    	<section class="shell">
+        	<nav class="theme-apex left">
+			      <%= link_to "Listings", listings_url %>
+			      <%= link_to "List Apartment", new_listing_url %>
+				<% if session["user_id"] %>
+				Hello, <%= User.find(session[:user_id]).name.capitalize %>
+					<%= link_to 'Home', root_url %>
+					<%= link_to "Sign Out", "/logout" %>
+					<%= link_to 'My Profile', user_url(session[:user_id]) %>
+					<%= link_to "My Favorites", user_url(session[:user_id]) %>
+				<% else %>
+					<%= link_to 'Home', root_url %> 
+					<%= link_to "Sign In", "/login" %> 
+					<%= link_to 'Sign Up', new_user_url %> 
+				<% end %>
+        	</nav>
+    </section>
+  </header>
 <%= yield %>
 <%= yield :scripts %>
-	</div>
-	<footer>footer</footer>
+</div>
+<footer class="dark"></footer>
 </body>
 </html>

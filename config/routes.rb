@@ -1,7 +1,7 @@
 Demo::Application.routes.draw do
 
 
-  root :to => 'landings#home'
+  root :to => 'listings#home'
 
   get '/login' => 'sessions#new', as: 'login'
   get '/logout' => 'sessions#logout', as: 'logout'
@@ -15,8 +15,7 @@ Demo::Application.routes.draw do
   resources :landings
   resources :listings
 
-  get '/home' => 'landings#home'
-  get '/listings-dev' => 'landings#listings'
+  get '/home' => 'listings#home'
 
 
 end
