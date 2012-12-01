@@ -1,10 +1,18 @@
 class ListingsController < ApplicationController
   before_filter :require_admin, :only => [:create, :destroy, :update, :edit]
+  before_filter :require_landlord, :only => [:new, :create, :destroy, :update, :edit]
 
   def require_admin
     user = User.find_by_id(session[:user_id])
     if !user.present? || !user.admin
       redirect_to listings_url, :notice => 'Must be admin.'
+    end
+  end
+  
+  def require_landlord
+    user = User.find_by_id(session[:user_id])
+    if !user.present? || !user.landlord
+      redirect_to listings_url, :notice => "Must be landlord."
     end
   end
 
@@ -15,6 +23,8 @@ class ListingsController < ApplicationController
     @listings = Listing.search(params[:search])
     @wishlist = Wishlist.new
     @json = Listing.all.to_gmaps4rails
+    
+    @user = User.find_by_id(session[:user_id])
 
     search = Geocoder.search(params[:search])
 
@@ -67,9 +77,9 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(params[:listing])
-
+    
     respond_to do |format|
-      if @listing.save
+      if @listing.geocoded?
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render json: @listing, status: :created, location: @listing }
       else

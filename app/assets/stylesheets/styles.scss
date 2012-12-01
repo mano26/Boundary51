@@ -162,6 +162,14 @@ header {
 	margin-left: 17%;
 }
 
+#searchhome {
+	@include rounded-corners(7px);
+	width: 490px;
+	height: 40px;
+	margin-right: 60px;
+		margin-top: 10px;
+}
+
 #bedbathbar {
 	@include rounded-corners(7px);
 	width: 40px;
@@ -186,6 +194,18 @@ header {
     overflow-x: hidden !important;
     padding:0; 
     margin-top: 100px;
+	@include span-columns(12,12);
+}
+
+#adminwrapper {
+    border: solid 0px #0F0;
+    border-style:none;
+    width: auto;
+    color: #ececec;
+    overflow-x: hidden !important;
+    padding:0; 
+    margin-top: 125px;
+    margin-left: 50px;
 	@include span-columns(12,12);
 }
 

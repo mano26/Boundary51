@@ -1,4 +1,4 @@
-  <section id="wrapper">
+<section id="wrapper">
       <div class='search'>
         <form id="searchbox" action="">
           <%= form_tag listings_path, :method => 'get' do %>
@@ -75,8 +75,10 @@
                       <strong>Address:</strong> <%= listing.address %><br>
                       <strong>Beds:</strong> <%= listing.beds %> |  
                       <strong>Baths:</strong> <%= listing.bath %><br><br>
+                      <% if @user.present? && @user.admin == true  %>
                       <%= link_to 'Edit', edit_listing_path(listing) %>
                       <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      <% end %>
                   </div>
                   </div>
                   <div class="list-rent">
