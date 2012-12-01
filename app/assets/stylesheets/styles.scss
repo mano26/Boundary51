@@ -53,9 +53,10 @@ header {
 	@include span-columns(12,12);
 	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
 	@include text-shadow(1px, 1px, 1px, #ccc);
-	background: #ccc;	
+	background-image: url(/assets/wild_oliva.png);
 	margin: 0 auto;
 	color: #000;
+	height: 50px;
 	font-size: 12px;
 	font-weight: bold;
 	padding-top: 5px;
@@ -63,18 +64,26 @@ header {
 }
 
 #search {
-	@include span-columns(2	,12);
+	@include span-columns(4	,12);
 	@include rounded-corners(7px);
-	height: 20px;
-	padding: 2px;
-	margin: 1px;
-	margin-left: 5px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 17%;
 }
 
 #bedbathbar {
 	@include rounded-corners(7px);
-	width: 60px;
-	height: 20px;
+	width: 40px;
+	height: 10px;
+	padding: 2px;
+	margin: 1px;
+	margin-left: 17%;
+}
+
+#rentbar {
+	@include rounded-corners(7px);
+	width: 40px;
+	height: 10px;
 	padding: 2px;
 	margin: 1px;
 }
@@ -91,8 +100,9 @@ section {
 
 .btn-search {
 	@include sassy-button("matte", 5px, 19px, #cede85, #a7bf35, #fff, "inset");
-	font-size: 14px;
-	margin-left: 20px;
+	font-size: 18px;
+	height: 45px;
+	margin-top: 5px;
 }
 
 .avail {
@@ -122,26 +132,28 @@ section {
 	background-image: url(/assets/fabric_plaid.png);
 	height: 100%;
 	min-height: 660px;
+	margin-left: 5px;
 	color: black;
 	font-weight: bold;
-   -moz-box-shadow: inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow: inset 0 0 10px #000000;
+   	-moz-box-shadow: inset 0 0 10px #000000;
+   	-webkit-box-shadow: inset 0 0 10px #000000;
+   	box-shadow: inset 0 0 10px #000000;
 }
 
 .listhead {
 	@include span-columns(6,6);
 	height: 25px;
-	color: white;
+	color: #ffffff;
 	margin-right: 15px;
 	font-size: 12px;
-	text-align: right;
+	text-align: left;
 	padding: 2px;
 }
 
 .listfoot {
 	@include span-columns(6,6);
 	font-size: 12px;
+	color: #fff;
 }
 
 .logotrans {
@@ -150,7 +162,7 @@ section {
 }
 
 .logorent {
-	color: #CC1100;
+	color: #df2516;
 }
 
 .listings-set {
@@ -202,15 +214,15 @@ section {
 .list-rent {
 	@include span-columns(1,6);
 	float: right;
-	margin: 25px auto;
+	margin: 0px auto;
 	font-size: 16px;
 	text-align: center;
 }
 
 .btn-rent {
 	margin-top: 10px;
-	@include sassy-button("shiny", 5px, 12px, #CC1100);
-	@include sassy-button-style("inset", #CC1100);
+	@include sassy-button("shiny", 5px, 12px, #e5301d);
+	@include sassy-button-style("inset", #f708ad);
 }
 
 .map-btns {
@@ -227,7 +239,15 @@ section {
 }
 
 .btn-wish {
-@include sassy-button("flat", 5px, 12px, #4ba3cc)
+@include sassy-button("matte", 3px, 10px, #444, #444, #fff, "inset");
+font-weight: bold;
+margin-bottom: 10px;
+margin-right: -50px;
+color: #f708ad;
+}
+
+.btn-bedbath {
+@include sassy-button("flat", 3px, 9px, #000)
 }
 
 .arrow-right {
@@ -235,7 +255,7 @@ section {
 	height: 0; 
 	border-top: 8px solid transparent;
 	border-bottom: 8px solid transparent;
-	border-left: 8px solid #49bab4;
+	border-left: 8px solid #df2516;
 	margin-top: 5px;
 }
 
@@ -244,7 +264,7 @@ section {
 	height: 0; 
 	border-top:8px solid transparent;
 	border-bottom: 8px solid transparent; 
-	border-right: 8px solid #49bab4;
+	border-right: 8px solid #df2516;
 	margin-top: 5px
 }
 
@@ -277,9 +297,9 @@ section {
 footer {
   	@include text-shadow(1px, 1px, 2px, #000);
 	height: 50px;
+	font-weight: lighter;
 	background-image: url(/assets/wild_oliva.png);
-	color: #4ba3cc;
-	font-weight: bold;
+	color: lighten(#f708ad, 1%);	font-weight: bold;
 	@include span-columns(12,12);
   }
 
@@ -471,8 +491,8 @@ nav {
 
 .navbar li a {
 	@include rounded-corners(7px);
-	color: #8c8c8c;
-	font-weight: bold;
+	color: lighten(#f708ad, 1%);
+	font-weight: lighter;
 	float: left;
 	height: 40px;
 	line-height: 40px;
@@ -557,6 +577,7 @@ nav {
 
 .login a {
 	text-decoration: none;
+	color: #ffffff;
 }
 
 #contact {
@@ -708,7 +729,89 @@ nav {
 	font-size: 12px;
 }
 
-
+#contact a.button { 
+	background: #2e2e2e;
+	background: rgba(0,0,0,0.1);
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 5px 6px;
+	float: right;
+	margin-right: 25px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
+	}
+	
+	#contact a.button b {
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		text-indent: -9999px;
+		display: block;
+		width: 270px;
+		height: 70px;
+		background: #749302 url("../images/button-contact.png") no-repeat 50% 0;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(49%,rgba(255,255,255,0.15)), color-stop(49%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.01))),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					-ms-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		background: url("../images/button-contact.png") no-repeat 50% 0,
+					linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#749302;
+		margin: 0 auto;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.75);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.75);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 1px rgba(0,0,0,0.75);
+	}
+	
+	.search a.button:hover b {
+		background: #789602 url("../images/button-contact.png") no-repeat 50% 100%;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(49%,rgba(255,255,255,0.15)), color-stop(49%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.01))),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					-ms-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+		background: url("../images/button-contact.png") no-repeat 50% 100%,
+					linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
+					url("../images/bg-pattern.png"),
+					#789602;
+	}
 
 
 

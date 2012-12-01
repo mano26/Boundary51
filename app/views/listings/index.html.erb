@@ -3,19 +3,25 @@
         <form id="searchbox" action="">
           <%= form_tag listings_path, :method => 'get' do %>
           <!-- search bar id is in text field tag -->
+
           <%= text_field_tag :search, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
+          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Beds'%>
+          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
+          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Baths'%>
+          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
+           <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Min Rent'%>
+          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
+          <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Max Rent s   '%>
+          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
           <%= submit_tag 'Find Apartments', :class=> 'btn-search', :name => nil %>
-
-          <%= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Beds'%>
-          <%= submit_tag 'Submit', :class=> 'btn-search', :name => nil%>
-
-          <%= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Baths'%>
-          <%= submit_tag 'Submit', :class=> 'btn-search', :name => nil %>
-          <% end %>
+          <% end %>        
         </form>
     </div>
       <div class="options">
-        <div class="optionhead"><div id="option-arrow" class="arrow-left"><a href="#" class="arr-left" onclick="slidePaneloption('open')"><</a><a href="#" class="arr-right" onclick="slidePaneloption('close')">></a></div></div>
+        <div class="optionhead">
+          <div id="option-arrow" class="arrow-left">
+            <a href="#" class="arr-left" onclick="slidePaneloption('open')"><</a>
+            <a href="#" class="arr-right" onclick="slidePaneloption('close')">></a></div></div>
           <div class="optionbody">
             <table>
               <tr>
@@ -52,7 +58,11 @@
       </div>
     <div class="listings-set">
         <div class="listing">
-            <div class="listhead"># of Results | Sort by: Rent Distance Availability</div>
+            <div class="listhead"> 
+ <form id="searchbox" action="">
+                
+        </form>
+              # of Results | Sort by: Rent Distance Availability</div>
             <div class="listbody">
               <%  @listings.each do |listing| %>
                 <div class="listholder">
@@ -65,19 +75,19 @@
                       <strong>Address:</strong> <%= listing.address %><br>
                       <strong>Beds:</strong> <%= listing.beds %> |  
                       <strong>Baths:</strong> <%= listing.bath %><br><br>
-                              <%= simple_form_for @wishlist, :remote => :true do |f| %>
-                      <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
-                      <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
-                      <%= f.submit 'Add to wish list', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
-                    <% end %>
                       <%= link_to 'Edit', edit_listing_path(listing) %>
                       <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
                   </div>
                   </div>
                   <div class="list-rent">
+                               <%= simple_form_for @wishlist, :remote => :true do |f| %>
+                      <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+                      <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
+                      <%= f.submit 'Add to wish list', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
+                    <% end %>
                       <strong>$<%= listing.price %></strong><br>
                       <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
-                      <span class="avail"><strong>Avl:</strong> <%= listing.available %></span>
+                      <span class="avail"><strong>Avl:</strong> <%= listing.available %></span><br>
                   </div>
                </div>
            <% end %>
