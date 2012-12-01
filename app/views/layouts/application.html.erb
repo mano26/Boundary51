@@ -15,7 +15,6 @@
 	      <ul>
 		      <li><%= link_to "Listings", listings_url %></li>
 		      <li><a href="#">Saved Searches</a></li>
-		      <li><%= link_to "My Favorites", user_url(session[:user_id]) %></li>
 		      <li><%= link_to "List Apartment", new_listing_url %></li>
 	      </ul>
 	      		<div class="login">
@@ -25,6 +24,7 @@
 				<%= link_to 'Home', root_url %>|
 				<%= link_to "Sign Out", "/logout" %>|
 				<%= link_to 'My Profile', user_url(session[:user_id]) %>|
+				<%= link_to "My Favorites", user_url(session[:user_id]) %>
 			<% else %>
 				<%= link_to 'Home', root_url %> |
 				<%= link_to "Sign In", "/login" %> |

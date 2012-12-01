@@ -17,7 +17,7 @@ class WishlistsController < ApplicationController
       if @wishlist.save
         format.html { redirect_to "/users/#{session[:user_id]}", notice: 'Listing was successfully added to your wishlist.' }
         format.json { render json: @wishlist, status: :created, location: @wishlist }
-        format.js { render "create_wish"}
+        format.js { render "create_wish" }
       else
         format.html { render action: "new" }
         format.json { render json: @wishlist.errors, status: :unprocessable_entity }
