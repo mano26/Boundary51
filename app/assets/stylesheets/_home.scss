@@ -1,3 +1,5 @@
+@import 'sassybuttons';
+
 * { margin: 0; padding: 0; outline: 0; }
 
 body, html { height: 100%; }
@@ -313,6 +315,13 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 .url-box h4 { background: #d1d1d1; font-size: 16px; line-height: 30px; padding: 10px 20px; border-radius: 1px 1px 0 0; }
 .url-box p { font-size: 21px; }
 
+.btn-search {
+	@include sassy-button("matte", 5px, 19px, #cede85, #a7bf35, #fff, "inset");
+	font-size: 18px;
+	height: 45px;
+	margin-top: 5px;
+}
+
 
   .ch-grid {
     margin: -50px 0 0 0;
@@ -396,7 +405,7 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 }
 
 .ch-img-1 { 
-	background-image: url(/assets/1.jpg);
+	background-image: url(/assets/orangebed.jpeg);
 }
 
 .ch-img-2 { 
@@ -414,7 +423,7 @@ footer.light .foot-nav a { word-spacing: 0; color: #000; }
 	font-size: 24px;
 	margin: 0 15px;
 	padding: 60px 0 0 0;
-	height: 110px;
+	height: 60px;
 	font-family: 'Open Sans', Arial, sans-serif;
 	text-shadow: 
 		0 0 1px #fff, 
