@@ -15,74 +15,27 @@
 				<div class="logo">
 						<a href="<%= root_url %>"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></a>
 				</div>
-						<a href="../logout" class="blue-button contact-popup-link" style="color: white;">Sign Out</a>
-						<a href="../users/new" class="blue-button popup-link cboxElement" style="color: white;">My Profile</a>
 						<a href="../login" class="blue-button contact-popup-link" style="color: white;">Sign In</a>
 						<a href="../users/new" class="blue-button popup-link cboxElement" style="color: white;">Sign Up</a>
-	<div class="shell">
-<!-- 		POPUP FOR SGIN IN SIGN UP
-<div id="contact-dd">
-			<a href="home url" class="close"></a>
-					<div class="form">
-						<form class="tincan-validate" action="http://tincanapi.com/contact-us/" method="post">
-				<span class="field-holder input-holder"><input name="tincan_name" type="text" class="field required" value="Name" title="Name"></span>
-				<span class="field-holder input-holder"><input name="tincan_email" type="text" class="field email" value="Email Address" title="Email Address"></span>
-				<input type="hidden" name="tincan_contact_form_submission" value="1354310634">
-				<input type="hidden" id="tincanccform" name="tincanccform" value="8909d23953">
-				<input type="hidden" name="_wp_http_referer" value="/what-is-tin-can/overview/">				
-				<input type="submit" value="Submit" class="submit blue-button">
-				<div class="cl">&nbsp;</div>
-			</form>
-		</div>
-					<div class="success">
-				<p>Thanks! Someone will be in touch with you shortly.</p>
-			</div>
-			<div class="bottom">
-				<p>Rather just email us? <a href="mailto:#" target="blank">Email us here</a>.<br>Rather speak with someone in person? <br>Call with Questions</p>
-				<p class="phone">xxx-xxx-xxxx</p>
-			</div>
-		</div> -->
-	</div>
+			<div class="shell">
+					</div>
 	<div id="navigation" class="type2">
 		<div id="main-nav">
 			<div class="shell">
 				<ul id="menu-main-navigation" class="menu">
 					<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
-						<%= link_to "Listings", listings_url %></li>
+						<a href="#">Listings"</a></li>
 					<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
-						<%= link_to "List Apartment", new_listing_url %></li>
+						<a href="#">List Apartment"</a></li>
 					<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51">
 						<a href="#">Saved Searches</a></li>
 					<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53">
-						<%= link_to "My Favorites", user_url(session[:user_id]) %></li>
+						<a href="#">My Favorites</a>	</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </header>
-
-<!-- 	<header class="light">
-		<div class="logo"><a href="<%= root_url %>"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></a></div>
-    	<section class="shell">
-        	<nav class="theme-apex left">
-			      <%= link_to "Listings", listings_url %>
-			      
-			      <% if session["user_id"] && User.find(session[:user_id]).landlord == true %>
-			      <%= link_to "List Apartment", new_listing_url %>
-			      <% end %>
-				<% if session["user_id"] %>
-				Hello, <%= User.find(session[:user_id]).name.capitalize %>
-					<%= link_to "Sign Out", "/logout" %>
-					<%= link_to 'My Profile', user_url(session[:user_id]) %>
-					<%= link_to "My Favorites", user_url(session[:user_id]) %>
-				<% else %>
-
-					<%= link_to "Sign In", "/login" %> 
-					<%= link_to 'Sign Up', new_user_url %> 
-				<% end %>
-        	</nav>
-    </section>
-  </header> -->
 <%= yield %>
 <%= yield :scripts %>
 </div>
