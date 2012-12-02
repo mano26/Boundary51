@@ -1,0 +1,10 @@
+<%= gmaps({
+      "map_options" => { "type" => "ROADMAP", 'detect_location' => true , 'center_on_user' => true , "zoom" => 13, "auto_adjust" => false },"markers" => { "data" => @markers }
+      })
+    %>
+    
+     <%= gmaps({
+						"map_options" => @map_options,"markers" => { "data" => @markers }
+            })
+
+          %>

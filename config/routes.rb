@@ -1,6 +1,8 @@
 Demo::Application.routes.draw do
 
 
+  resources :searches
+
   root :to => 'listings#home'
 
   get '/login' => 'sessions#new', as: 'login'
