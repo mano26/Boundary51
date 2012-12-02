@@ -102,12 +102,16 @@ html{
 	height: 100%;
 	padding: 0;
 }
-body{
-	margin: 0;
-	font-family: arial, sans-serif;
-	background: #2c2c2c;
-	padding: 0;
-	height: 100%;
+body {
+    font-size: 18px;
+    line-height: 24px;
+    text-shadow: 0px 1px 1px rgba(255,255,255,.3);
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-family: 'HelveticaLight', Helvetica, Arial, sans-serif;
+    color: #303030;
+    background: #2c2c2c;
+    min-width: 100%;
 }
 
 .container {
@@ -121,7 +125,7 @@ body{
 header {
 	@include span-columns(12,12);
   	@include text-shadow(1px, 1px, 2px, #000);
-	height: 100px;
+	height: 200px;
 	width: 100%;
 	padding: 0;
 	background: #ececec;
@@ -133,7 +137,7 @@ header {
 	@include span-columns(2,12);
 	float: left;
 	margin: 0 auto;
-	color: #303030;;
+	color: #f05023;
 	margin-top: 30px;
 	margin-left: 30px;
 	font-size: 1.5em;
@@ -193,7 +197,7 @@ header {
     width: auto;
     overflow-x: hidden !important;
     padding:0; 
-    margin-top: 100px;
+    margin-top: 150px;
 	@include span-columns(12,12);
 }
 
@@ -204,7 +208,7 @@ header {
     color: #ececec;
     overflow-x: hidden !important;
     padding:0; 
-    margin-top: 125px;
+    margin-top: 175px;
     margin-left: 50px;
 	@include span-columns(12,12);
 }
@@ -215,6 +219,23 @@ header {
 	height: 45px;
 	margin-top: 5px;
 }
+
+.blue-button { 
+		@include rounded-corners(7px);
+	color:#fff;
+ 	font-size:16px; 
+ 	margin-right: 20px; 
+ 	margin-top: 20px;
+ 	text-shadow: 0px 0px 0px #d0d0d0; 
+ 	font-family: 'HelveticaBold', Helvetica, Arial, sans-serif; 
+ 	height:37px; 
+ 	line-height:37px; 
+ 	float:right; 
+ 	padding: 0 13px; 
+ 	background-color:#3d3a39;  }
+.blue-button:hover { text-decoration:none; text-shadow: 0px 0px 0px #d0d0d0; background-color:#f05023; }
+
+.submit.blue-button { border:0; cursor:pointer; overflow:visible; }
 
 .avail {
 	font-size: 10px;
@@ -274,7 +295,7 @@ header {
 }
 
 .logorent {
-	color: #df2516;
+	color: #f05023;
 }
 
 .listings-set {
@@ -322,16 +343,15 @@ header {
 
 .list-details {
 	@include span-columns(3,6);
-	padding-top: 20px;
 	font-size: 12px;
-	margin-top: 5px;
+	margin-top: 15px;
 	float: left;
 }
 
 .list-rent {
 	@include span-columns(1,6);
 	float: right;
-	margin: 0px auto;
+	margin: 15px auto;
 	font-size: 16px;
 	text-align: center;
 }
@@ -358,8 +378,6 @@ header {
 .btn-wish {
 @include sassy-button("matte", 3px, 10px, #444, #444, #fff, "inset");
 font-weight: bold;
-margin-bottom: 10px;
-margin-right: -50px;
 color: #f708ad;
 }
 

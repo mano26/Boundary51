@@ -72,7 +72,14 @@
                       <strong>Description:</strong><%= listing.unit_description %><br>
                       <strong>Address:</strong> <%= listing.address %><br>
                       <strong>Beds:</strong> <%= listing.beds %> |  
-                      <strong>Baths:</strong> <%= listing.bath %><br><br>
+                      <strong>Baths:</strong> <%= listing.bath %><br>
+                                         <% if session[:user_id].present? %>
+                      <%= form_for @wishlist, :remote => :true do |f| %>
+                      <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+                      <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
+                      <%= f.submit 'W', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
+                      <% end %>
+                    <% end %><br>
                       <% if @user.present? && @user.admin == true  %>
                       <%= link_to 'Edit', edit_listing_path(listing) %>
                       <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -80,13 +87,6 @@
                   </div>
                   </div>
                   <div class="list-rent">
-                    <% if session[:user_id].present? %>
-                      <%= form_for @wishlist, :remote => :true do |f| %>
-                      <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
-                      <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
-                      <%= f.submit 'W', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
-                      <% end %>
-                    <% end %>
                       <strong>$<%= listing.price %></strong><br>
                       <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
                       <span class="avail"><strong>Avl:</strong> <%= listing.available %></span><br>
