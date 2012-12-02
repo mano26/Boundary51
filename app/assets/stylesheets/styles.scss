@@ -158,6 +158,22 @@ header {
 	padding-bottom: 5px;
 }
 
+.homebbsearch {
+	@include rounded-corners(7px);
+	height: 20px;
+	width: 70px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.homerentsearch {
+	@include rounded-corners(7px);
+	height: 20px;
+	width: 60px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
 #search {
 	@include span-columns(4	,12);
 	@include rounded-corners(7px);
@@ -166,12 +182,26 @@ header {
 	margin-left: 17%;
 }
 
+.homebtnlabel {
+	color: white;
+	margin-right: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.homebtnlabelmax {
+	color: white;
+	margin-left: 20px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
 #searchhome {
 	@include rounded-corners(7px);
 	width: 490px;
 	height: 40px;
 	margin-right: 60px;
-		margin-top: 10px;
+	margin-top: 10px;
 }
 
 #bedbathbar {
@@ -447,110 +477,6 @@ footer {
   	opacity: .0;
   }
 
-// nav {
-// 	@include span-columns(10,12);
-// 	float: right;
-// 	margin-top: 0px;
-// 	padding: 6px;
-// 	-moz-border-radius: 6px;
-// 	-webkit-border-radius: 6px;
-// 	border-radius: 6px;
-// 	overflow: hidden;
-// 	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.75), 
-// 					 inset -1px -1px 0 #444;
-// 	-webkit-box-shadow: inset 1px 1px 2px #000, 
-// 						inset -1px -1px 0 #444;
-// 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.75), 
-// 				inset 0 -1px 0 rgba(255,255,255,0.15);
-// }
-
-// .navbar {
-// 	@include span-columns(7,10);
-// 	margin-left: 0;
-// }
-
-// .navbar li { display: inline;}
-
-// .navbar li a {
-// 	@include rounded-corners(7px);
-// 	color: lighten(#f708ad, 1%);
-// 	font-weight: lighter;
-// 	float: left;
-// 	height: 40px;
-// 	line-height: 40px;
-// 	margin-right: 5px;
-// 	text-align: center;
-// 	padding: 0 15px;
-// 	font-size: 12px;
-// 	text-shadow: -1px -1px #000;
-// 	text-transform: uppercase;
-// 	background-image:	-moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%),
-// 						url("/assets/nav-item-pattern.png");
-// 	background-image:	-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.1)), color-stop(100%,rgba(255,255,255,0))),
-// 						url("/assets/nav-item-pattern.png");
-// 	background-image:	-webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
-// 						url("/assets/nav-item-pattern.png");
-// 	background-image:	-o-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
-// 						url("/assets/nav-item-pattern.png");
-// 	background-image:	-ms-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
-// 						url("/assets/nav-item-pattern.png");
-// 	background-image:	linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
-// 						url("/assets/nav-item-pattern.png");
-// 	background-color: #343434;
-// 	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.6), 
-// 					 inset 0 1px 0 rgba(255,255,255,0.15);
-// 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.6), 
-// 						inset 0 1px 0 rgba(255,255,255,0.15);
-// 	box-shadow: 0 1px 1px rgba(0,0,0,0.6), 
-// 				inset 0 1px 0 rgba(255,255,255,0.15);
-// 	text-decoration: none;
-// }
-	
-// .navbar li.active a {
-// 	@include rounded-corners(7px);
-// 	background: #7f9b15 url("../images/noise.jpg") repeat 0 0;
-// 	background: url("/assets/noise.png") 0 0 repeat,
-// 				-moz-linear-gradient(top, #7c9911 0%, #829e1c 50%, #739102 51%, #7f9b15 100%);
-// 	background: url("/assets/noise.png") 0 0 repeat,
-// 				-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c9911), color-stop(50%,#829e1c), color-stop(51%,#739102), color-stop(100%,#7f9b15));
-// 	background: url("/assets/noise.png") 0 0 repeat,
-// 				-webkit-linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);
-// 	background: url("/assets/noise.png") 0 0 repeat,
-// 				-o-linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);
-// 	background: url("/assets/noise.png") 0 0 repeat,
-// 				-ms-linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);
-// 	background: url("/assets/noise.png") 0 0 repeat,
-// 				linear-gradient(top, #7c9911 0%,#829e1c 50%,#739102 51%,#7f9b15 100%);	
-// 	color: #fff;
-// 	-moz-box-shadow:	inset 0 0 1px rgba(255,255,255,0.5), 
-// 						inset 0 1px 0 rgba(255,255,255,0.5), 
-// 						0 2px 4px rgba(0,0,0,0.6);
-// 	-webkit-box-shadow:	inset 0 0 1px rgba(255,255,255,0.5), 
-// 						inset 0 1px 0 rgba(255,255,255,0.5), 
-// 						0 2px 4px rgba(0,0,0,0.6);
-// 	box-shadow:	inset 0 0 1px rgba(255,255,255,0.5), 
-// 				inset 0 1px 0 rgba(255,255,255,0.5), 
-// 				0 2px 4px rgba(0,0,0,0.6);
-// }
-
-// .navbar li.contact a {
-// 	margin-right: 0;
-// 	-moz-border-radius: 0 4px 4px 0;
-// 	-webkit-border-radius: 0 4px 4px 0;
-// 	border-radius: 0 4px 4px 0;
-// }
-
-// .navbar li a span {
-// 	background: transparent url("/assets/nav.png") 0 -23px no-repeat;
-// 	display: block;
-// 	text-indent: -9999px;
-	
-// 	width: 53px;
-// 	height: 23px;
-// 	margin: 8px;
-// 	opacity: 1;
-// }
-
 .login {
 	@include span-columns(3,10);
 	float: right;
@@ -560,106 +486,6 @@ footer {
 .login a {
 	text-decoration: none;
 	color: #000000;
-}
-
-#contact {
-	background-image: url(/assets/creampaper.png);
-	margin-top: 50px;
-}
-	
-
-#contact a.button { 
-	background: #2e2e2e;
-	background: rgba(0,0,0,0.1);
-	font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	padding: 5px 5px 6px;
-	float: right;
-	margin-right: 25px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
-	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
-	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1), inset 0 1px 2px rgba(0,0,0,0.75);
-	}
-	
-	#contact a.button b {
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		border-radius: 4px;
-		text-indent: -9999px;
-		display: block;
-		width: 270px;
-		height: 70px;
-		background: #749302 url("/assets/button-contact.png") no-repeat 50% 0;
-		background: url("/assets/button-contact.png") no-repeat 50% 0,
-					-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#749302;
-		background: url("/assets/button-contact.png") no-repeat 50% 0,
-					-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(49%,rgba(255,255,255,0.15)), color-stop(49%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.01))),
-					url("/assets/bg-pattern.png"),
-					#749302;
-		background: url("/assets/button-contact.png") no-repeat 50% 0,
-					-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#749302;
-		background: url("/assets/button-contact.png") no-repeat 50% 0,
-					-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#749302;
-		background: url("/assets/button-contact.png") no-repeat 50% 0,
-					-ms-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#749302;
-		background: url("/assets/button-contact.png") no-repeat 50% 0,
-					linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#749302;
-		margin: 0 auto;
-		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.75);
-		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.75);
-		box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(255,255,255,0.05), 0 1px 1px rgba(0,0,0,0.75);
-	}
-	
-	#contact a.button:hover b {
-		background: #789602 url("/assets/button-contact.png") no-repeat 50% 100%;
-		background: url("/assets/button-contact.png") no-repeat 50% 100%,
-					-moz-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#789602;
-		background: url("/assets/button-contact.png") no-repeat 50% 100%,
-					-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(49%,rgba(255,255,255,0.15)), color-stop(49%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.01))),
-					url("/assets/bg-pattern.png"),
-					#789602;
-		background: url("/assets/button-contact.png") no-repeat 50% 100%,
-					-webkit-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#789602;
-		background: url("/assets/button-contact.png") no-repeat 50% 100%,
-					-o-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#789602;
-		background: url("/assets/button-contact.png") no-repeat 50% 100%,
-					-ms-linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#789602;
-		background: url("/assets/button-contact.png") no-repeat 50% 100%,
-					linear-gradient(top, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 49%, rgba(255,255,255,0) 49%, rgba(255,255,255,0.01) 100%),
-					url("/assets/bg-pattern.png"),
-					#789602;
-	}
-	
-
-#contact p {
-	clear: both;
-	font-size: 28px;
-	text-align: center;
-	padding-top: 17px;
-	text-shadow: 0 -1px #000;
-	letter-spacing: -0.025em;
 }
 
 #homemain {
