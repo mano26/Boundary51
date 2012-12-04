@@ -17,7 +17,7 @@
 						<a href="<%= root_url %>"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></a>
 				</div>
 					<% if session["user_id"] %>
-						Hello, <%= User.find(session[:user_id]).name.capitalize %>
+						<span class="blue-button-head">Logged in as: <%= User.find(session[:user_id]).name.capitalize %></span><br>
 						<a href="../logout" class="blue-button" style="color: white;">	Sign Out</a>
 						<a href="<%= user_url(session[:user_id]) %>" class="blue-button" style="color: white;">My Profile</a>
 					<% else %>

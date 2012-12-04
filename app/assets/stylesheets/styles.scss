@@ -250,12 +250,20 @@ header {
 	margin-top: 5px;
 }
 
+.blue-button-head{
+	float: right;
+	margin-right: 20px;
+ 	font-family: 'HelveticaBold', Helvetica, Arial, sans-serif;
+ 	font-size: 10px;
+
+}
+
 .blue-button { 
-		@include rounded-corners(7px);
+	@include rounded-corners(7px);
 	color:#fff;
  	font-size:16px; 
  	margin-right: 20px; 
- 	margin-top: 20px;
+ 	margin-top: 10px;
  	text-shadow: 0px 0px 0px #d0d0d0; 
  	font-family: 'HelveticaBold', Helvetica, Arial, sans-serif; 
  	height:37px; 
@@ -263,9 +271,16 @@ header {
  	float:right; 
  	padding: 0 13px; 
  	background-color:#3d3a39;  }
-.blue-button:hover { text-decoration:none; text-shadow: 0px 0px 0px #d0d0d0; background-color:#f05023; }
 
-.submit.blue-button { border:0; cursor:pointer; overflow:visible; }
+.blue-button:hover { 
+	text-decoration:none; 
+	text-shadow: 0px 0px 0px #d0d0d0; 
+	background-color:#f05023; }
+
+.submit.blue-button { 
+	border:0; 
+	cursor:pointer; 
+	overflow:visible; }
 
 .avail {
 	font-size: 10px;
