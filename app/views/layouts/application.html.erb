@@ -13,10 +13,17 @@
 <div class="container">
 	<header class="light">
 				<div class="logo">
+	
 						<a href="<%= root_url %>"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></a>
 				</div>
+					<% if session["user_id"] %>
+						<span class="blue-button-head">Logged in as: <%= User.find(session[:user_id]).name.capitalize %></span><br>
+						<a href="../logout" class="blue-button" style="color: white;">	Sign Out</a>
+						<a href="<%= user_url(session[:user_id]) %>" class="blue-button" style="color: white;">My Profile</a>
+					<% else %>
 						<a href="../login" class="blue-button contact-popup-link" style="color: white;">Sign In</a>
 						<a href="../users/new" class="blue-button popup-link cboxElement" style="color: white;">Sign Up</a>
+					<% end %>
 			<div id="headfoot" class="shell">
 			</div>
 	<div id="navigation" class="type2">
@@ -24,13 +31,27 @@
 			<div class="shell">
 				<ul id="menu-main-navigation" class="menu">
 					<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
-						<a href="<%= new_listing_url %>">Listings</a></li>
-					<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
+						<a href="<%= listings_url %>">Listings</a></li>
+					<% if session["user_id"] && User.find(session[:user_id]).landlord == true %>
+						<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
 						<a href="<%= new_listing_url %>">List Apartment</a></li>
+					<% else %>
+						<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
+						<a href="#">List Apartment</a></li>
+					<% end %>
+				<% if session["user_id"] %>
 					<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51">
 						<a href="#">Saved Searches</a></li>
+				<% else %>
+				<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51">
+						<a href="#">Saved Searches</a></li>
+				<% end %>
+				<% if session["user_id"] %>
 					<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53">
-						<a href="#">My Favorites</a></li>
+						<a href="<%= user_url(session[:user_id]) %>">My Favorites</a></li>
+				<% else %>
+					<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="#">My Favorites</a></li>
+						<% end %>
 				</ul>
 			</div>
 		</div>
