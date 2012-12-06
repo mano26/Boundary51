@@ -8,7 +8,7 @@
                                 <div class="ch-info-front ch-img-1"></div>
                                 <div class="ch-info-back">
                                     <h3>How Many Bedrooms?</h3>
-                                    <span class="homebtnlabel">Beds:</span> <input type="text" class="homebbsearch" placeholder="# of Beds">
+                                    <%= text_field_tag :search, params[:search], :placeholder => 'How many beds?'%>
                                 </div>  
                             </div>
                         </div>
@@ -19,7 +19,7 @@
                                 <div class="ch-info-front ch-img-2"></div>
                                 <div class="ch-info-back">
                                     <h3>How Many Bathrooms?</h3>
-                                    <span class="homebtnlabel">Beds:</span> <input type="text" class="homebbsearch" placeholder="# of Baths">
+                                    <%= text_field_tag :search, params[:search], :placeholder => 'How Many Baths'%>
                                 </div>
                             </div>
                         </div>
@@ -30,26 +30,17 @@
                                 <div class="ch-info-front ch-img-3"></div>
                                 <div class="ch-info-back">
                                     <h3>Rent Range?</h3>
-                                    <span class="homebtnlabel">Min</span>&nbsp;<span class="homebtnlabelmax">Max</span><br>
-                                    <input type="text" class="homerentsearch" placeholder="Min Rent"></a>
-                                    <input type="text" class="homerentsearch" placeholder="Max Rent"></a>
+                                    <a><%= text_field_tag :search, params[:search], :placeholder => 'Min Rent'%></a>
+                                    <a><%= text_field_tag :search, params[:search], :placeholder => 'Max Rent'%></a>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </ul><br><br>
-          <form id="searchbox" action="">
-          <%= form_tag listings_path, :method => 'get' do %>
+         <!--  <form id="searchbox" action=""> -->
+          <%= form_tag listings_url, :id => 'searchbox', :method => 'get' do %>
           <!-- search bar id is in text field tag -->
-          <%= text_field_tag :searchhome, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
-          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Beds'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
-          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Baths'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
-           <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Min Rent'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
-          <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Max Rent s   '%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
+          <%= text_field_tag :search, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
           <%= submit_tag 'Find Apartments', :class=> 'btn-search', :name => nil %>
           <% end %>        
         </form>
