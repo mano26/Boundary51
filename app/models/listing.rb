@@ -30,8 +30,8 @@ class Listing < ActiveRecord::Base
   #          end
   #        end
    
-def self.search(lat, lng) 
-  if lat && lng
+def self.search(latitude, longitude) 
+  if latitude && longtitude
     find(:all, :conditions => ['city Like ?', "%#{search}%"])
   else
     find(:all)
