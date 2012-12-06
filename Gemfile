@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 group :production do
-  gem 'pg'
+	gem 'pg'
 end
 
 group :development do
-  gem 'sqlite3'
+	gem 'sqlite3'
 end
 
 group :assets do
@@ -15,6 +15,7 @@ group :assets do
   gem "susy"
   gem 'compass', '>= 0.12.2'
   gem 'compass-rails', '>= 1.0.3'
+  gem 'sassy-buttons'
 end
 
 gem 'rails', '3.2.8'
@@ -23,5 +24,4 @@ gem 'gmaps4rails'
 gem 'pry'
 gem 'geocoder'
 gem 'simple_form'
-gem 'sassy-buttons'
 gem 'bcrypt-ruby', '~> 3.0.0'
