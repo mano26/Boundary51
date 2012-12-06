@@ -29,7 +29,7 @@ class ListingsController < ApplicationController
     if search.present?
       @location = search.first.geometry["location"]
 
-      @listings = Listing.near(params[:search], 20)
+      @listings = Listing.near(params[:search], 5)
 
       # @listings = Listing.search(@location["lat"], @location["lng"])
       @markers = @listings.to_gmaps4rails

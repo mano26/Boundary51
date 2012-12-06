@@ -99,7 +99,10 @@
           </div>
           <div class='map'>  
             <%= gmaps({
-									"map_options" => @map_options,"markers" => { "data" => @markers}})
+									"map_options" => @map_options,"markers" => { "data" => @markers}, "circles"     => { "data" => '[
+                         {"lng": -87.6500, "lat": 41.8500, "radius": 25000, "strokeColor": "#FF0000"}
+                         ]',
+                      }})
 
                 %>
           </div>
