@@ -9,7 +9,8 @@ class Listing < ActiveRecord::Base
 
   acts_as_gmappable :process_geocoding => false
   geocoded_by :address
-
+  reverse_geocoded_by :latitude, :longitude
+  
   after_validation :geocode
 
   validate :ensure_landlord_cant_dupe
@@ -29,9 +30,9 @@ class Listing < ActiveRecord::Base
   #          end
   #        end
    
-def self.search(search) 
-  if search
-   find(:all, :conditions => ['address Like ?', "%#{search}%"])
+def self.search(lat, lng) 
+  if lat && lng
+    find(:all, :conditions => ['city Like ?', "%#{search}%"])
   else
     find(:all)
   end
