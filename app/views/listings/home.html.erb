@@ -60,11 +60,11 @@
                             </div>
                         </div>
                     </li>
-                </ul><br><br>
+                </ul>
          <!--  <form id="searchbox" action=""> -->
           <%= form_tag listings_url, :id => 'searchbox', :method => 'get' do %>
           <!-- search bar id is in text field tag -->
-          <%= text_field_tag :search, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
+          <%= text_field_tag :searchhome, params[:search], :placeholder => 'City, Zip, Neighborhood'%><br>
           <%= submit_tag 'Find Apartments', :class=> 'btn-search', :name => nil %>
           <% end %>        
   <h3 class="theme-apexb t-yellow"><br><strong>Unique Features</strong></h3>
