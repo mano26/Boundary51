@@ -1,6 +1,8 @@
 class ListingsController < ApplicationController
   before_filter :require_admin, :only => [:create, :destroy, :update, :edit]
   before_filter :require_landlord, :only => [:new, :create, :destroy, :update, :edit]
+  before_filter :load_user
+
 
   def require_admin
     user = User.find_by_id(session[:user_id])
@@ -18,24 +20,26 @@ class ListingsController < ApplicationController
 
 
   def index
-    
-    @markers = Listing.all.to_gmaps4rails
-    @listings = Listing.search(params[:search])
-    @wishlist = Wishlist.new
-    @json = Listing.all.to_gmaps4rails
-    
-    @user = User.find_by_id(session[:user_id])
-
     search = Geocoder.search(params[:search])
+    
+    @wishlist = Wishlist.new
 
-    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 12, "auto_adjust" => false,'center_on_user' => false}
+    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 14, "auto_adjust" => false,'center_on_user' => false}
 
     if search.present?
       @location = search.first.geometry["location"]
+
+      @listings = Listing.near(params[:search], 5)
+
+      # @listings = Listing.search(@location["lat"], @location["lng"])
+      @markers = @listings.to_gmaps4rails
+
       @map_options['center_latitude'] = @location["lat"]
       @map_options['center_longitude'] = @location["lng"]
     else
-      
+      @listings = Listing.all #find the lat/lng from the browser
+      @markers = @listings.to_gmaps4rails
+
       @map_options['center_on_user'] = true
       @map_options['detect_location'] = true
       @map_options['auto_adjust'] = true
@@ -111,6 +115,10 @@ class ListingsController < ApplicationController
       format.html { redirect_to listings_url }
       format.json { head :no_content }
     end
+  end
+
+  def load_user
+        @user = User.find_by_id(session[:user_id])
   end
 
 end

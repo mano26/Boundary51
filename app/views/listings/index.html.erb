@@ -3,16 +3,7 @@
         <form id="searchbox" action="">
           <%= form_tag listings_path, :method => 'get' do %>
           <!-- search bar id is in text field tag -->
-
           <%= text_field_tag :search, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
-          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Beds'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
-          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Baths'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
-           <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Min Rent'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
-          <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Max Rent s   '%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
           <%= submit_tag 'Find Apartments', :class=> 'btn-search', :name => nil %>
           <% end %>        
         </form>
@@ -106,7 +97,10 @@
           </div>
           <div class='map'>  
             <%= gmaps({
-									"map_options" => @map_options,"markers" => { "data" => @markers}})
+									"map_options" => @map_options,"markers" => { "data" => @markers}, "circles"     => { "data" => '[
+                         {"lng": -87.6500, "lat": 41.8500, "radius": 15000, "strokeColor": "#FF0000"}
+                         ]',  "zoom" => 15
+                      }})
 
                 %>
           </div>

@@ -31,7 +31,7 @@
 			<div class="shell">
 				<ul id="menu-main-navigation" class="menu">
 					<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
-						<a href="<%= new_listing_url %>">Search Listings</a></li>
+						<a href="<%= listings_url %>">Listings</a></li>
 					<% if session["user_id"] && User.find(session[:user_id]).landlord == true %>
 						<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
 						<a href="<%= new_listing_url %>">List Apartment</a></li>

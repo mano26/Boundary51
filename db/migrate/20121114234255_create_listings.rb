@@ -7,8 +7,8 @@ class CreateListings < ActiveRecord::Migration
       t.string :state
       t.string :zip
       t.string :country
-      t.string :latitude
-      t.string :longitude
+      t.float :latitude
+      t.float :longitude
       t.date :available
       t.float :bath
       t.text :building_description
