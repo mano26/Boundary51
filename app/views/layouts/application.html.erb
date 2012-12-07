@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>TRANSPARENT</title>
+  <title>Real Transparent</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,7 +14,7 @@
 	<header class="light">
 				<div class="logo">
 	
-						<a href="<%= root_url %>"><span class="logotrans">TRANSPA</span><span class="logorent">RENT</span></a>
+						<a href="<%= root_url %>"><span class="logorent">Real </span>Transparent</a>
 				</div>
 					<% if session["user_id"] %>
 						<span class="blue-button-head">Logged in as: <%= User.find(session[:user_id]).name.capitalize %></span><br>
@@ -31,7 +31,7 @@
 			<div class="shell">
 				<ul id="menu-main-navigation" class="menu">
 					<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
-						<a href="<%= new_listing_url %>">Listings</a></li>
+						<a href="<%= new_listing_url %>">Search Listings</a></li>
 					<% if session["user_id"] && User.find(session[:user_id]).landlord == true %>
 						<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
 						<a href="<%= new_listing_url %>">List Apartment</a></li>

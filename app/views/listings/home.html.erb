@@ -1,14 +1,24 @@
 <section id="intro">
         <section class="shell">
-            <h2 class="theme-apexb">Value message goes here</h2>
+            <h2 class="theme-apexb">Where Renters Can Find Real Listings, Presented Honestly And Accurately</h2>
                 <ul class="ch-grid">
                     <li>
                         <div class="ch-item">               
                             <div class="ch-info">
                                 <div class="ch-info-front ch-img-1"></div>
                                 <div class="ch-info-back">
-                                    <h3>How Many Bedrooms?</h3>
-                                    <span class="homebtnlabel">Beds:</span> <input type="text" class="homebbsearch" placeholder="# of Beds">
+                                    <form action="">
+                                  <div class="bedbathdrop">
+                                  <span class="homebtnlabel">Beds:</span> :
+                                      <select name="Beds">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                          </div>
+                                      </select>
+                                    </form>
                                 </div>  
                             </div>
                         </div>
@@ -18,8 +28,18 @@
                             <div class="ch-info">
                                 <div class="ch-info-front ch-img-2"></div>
                                 <div class="ch-info-back">
-                                    <h3>How Many Bathrooms?</h3>
-                                    <span class="homebtnlabel">Beds:</span> <input type="text" class="homebbsearch" placeholder="# of Baths">
+                                  <form action="">
+                                    <div class="bedbathdrop">
+                                      <span class="homebtnlabel">Baths:</span> :
+                                      <select name="Baths">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                      </select>
+                                      </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -29,40 +49,74 @@
                             <div class="ch-info">
                                 <div class="ch-info-front ch-img-3"></div>
                                 <div class="ch-info-back">
-                                    <h3>Rent Range?</h3>
-                                    <span class="homebtnlabel">Min</span>&nbsp;<span class="homebtnlabelmax">Max</span><br>
-                                    <input type="text" class="homerentsearch" placeholder="Min Rent"></a>
-                                    <input type="text" class="homerentsearch" placeholder="Max Rent"></a>
+                                     <div class="rentdrop">
+                                    <span class="homebtnlabel">Min 
+                                    <input type="text" class="homerentmin" placeholder=" Minimum Rent"></a><br><br>
+                                    Max
+                                    <input type="text" class="homerentmax" placeholder=" Maximum Rent"></a>
+                                  </span>
+                                </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                </ul><br><br>
+                </ul>
           <form id="searchbox" action="">
           <%= form_tag listings_path, :method => 'get' do %>
           <!-- search bar id is in text field tag -->
-          <%= text_field_tag :searchhome, params[:search], :placeholder => 'City, Zip, Neighborhood'%>
-          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Beds'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
-          <%#= text_field_tag :bedbathbar, params[:search], :placeholder => '# of Baths'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
-           <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Min Rent'%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil%>
-          <%#= text_field_tag :rentbar, params[:search], :placeholder => 'Max Rent s   '%>
-          <%#= submit_tag 'Submit', :class=> 'btn-bedbath', :name => nil %>
+          <%= text_field_tag :searchhome, params[:search], :placeholder => ' City, Zip, Neighborhood'%><br>
           <%= submit_tag 'Find Apartments', :class=> 'btn-search', :name => nil %>
           <% end %>        
         </form>
-  <br>
-  <p class="theme-apexb t-yellow"><br><strong>Unique Features</strong></p>
+  <h3 class="theme-apexb t-yellow"><br><strong>Unique Features</strong></h3>
 </section>  </section>
   <section id="tour" class="fake-page">
         <span class="top"></span>
 <section class="content">
   <section class="shell">
-    <h2 class="theme-apex">Feature Tour Goes Here</h2>
   </section>
-</section>  </section>
+  <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+          <h2>Customize Search Borders</h2>
+          <p>lorem lorem lorem</p>
+          <a href="#" class="da-link">Search</a>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Address Verification</h2>
+          <p>lorem lorem lorem</p>
+          <a href="#" class="da-link">Search</a>
+          <div class="da-img"><img src="/assets/2.png" alt="image01" /></div>
+        </div>
+        <div class="da-slide">
+          <h2>Smart Filters</h2>
+          <p>lorem lorem lorem</p>
+          <a href="#" class="da-link">Search</a>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Saved Searches & Overlays</h2>
+          <p>lorem lorem lorem</p>
+          <a href="#" class="da-link">Search</a>
+          <div class="da-img"></div>
+        </div>
+        <nav class="da-arrows">
+          <span class="da-arrows-prev"></span>
+          <span class="da-arrows-next"></span>
+        </nav>
+      </div>
+        </div>
+    <script type="text/javascript" src="/assets/jquery.cslider.js"></script>
+    <script type="text/javascript">
+      $(function() {
+      
+        $('#da-slider').cslider();
+        
+      });
+      </script>
+</section>  
+
+</section>
   <section id="plans" class="fake-page">
         <section class="shell">
 </section>  </section>

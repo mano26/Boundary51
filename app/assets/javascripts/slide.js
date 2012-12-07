@@ -15,6 +15,7 @@ function slidePanel(action){
         $('.list-details').stop().animate({'width' : '50%'});
         $('.list-map').stop().animate({'width' : '60%'});
         $('.gmaps4rails_map').attr({'width' : '100%'});
+        $('.list-photo').css({'display' : 'none'});
         $('.map_container').attr({'width' : '100%'});
         $('#maparr').attr('class', 'goright');
         $("#maparr")[0].setAttribute("onclick","slidePanel('open')");
@@ -32,6 +33,7 @@ function slidePanel(action){
         $('.list-rent').stop().animate({'width' : '13%'});
         $('.list-map').stop().animate({'width' : '38%'});
         $('.list-photo').stop().animate({'width' : '30%'});
+        $('.list-photo').css({'display' : 'block'});
     }
 }
 
@@ -83,3 +85,11 @@ function slidePaneloption(action){
 // setTimeout(function(){
 //     slidePaneloption('close');
 // }, 0);
+
+$(function(){
+    $("#listhold1 div.stack1").hover(function(){
+        $(this).stop().animate({top:"-130px"},{queue:false,duration:200});
+    }, function() {
+        $(this).stop().animate({top:"0px"},{queue:false,duration:200});
+    });
+});

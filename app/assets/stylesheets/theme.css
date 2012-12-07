@@ -34,7 +34,7 @@
 .theme-shell { width: 960px; margin: 0 auto; }
 
 .theme-apex { font-family: 'ApexNewMedium'; font-weight: normal; }
-.theme-apexb { font-family: 'ApexNewBook'; font-weight: normal; }
+.theme-apexb { font-family: 'ApexNewBook'; font-weight: normal; font-size: 20px; }
 .theme-lucida { font-family: 'Lucida Sans', 'Lucida Grande', arial, sans-serif; }
 .theme-noteworthy { font-family: 'NoteworthyLight'; font-weight: normal; }
 
