@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20121206014922) do
     t.string   "state"
     t.string   "zip"
     t.string   "country"
-    t.float    "latitude",             :limit => 255
-    t.float    "longitude",            :limit => 255
+    t.float    "latitude"
+    t.float    "longitude"
     t.date     "available"
     t.float    "bath"
     t.text     "building_description"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(:version => 20121206014922) do
     t.text     "unit_description"
     t.text     "utilities_included"
     t.boolean  "heat_included"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "beds"
     t.text     "description"
     t.string   "photo_url"

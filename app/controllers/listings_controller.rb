@@ -24,7 +24,7 @@ class ListingsController < ApplicationController
     
     @wishlist = Wishlist.new
 
-    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 12, "auto_adjust" => false,'center_on_user' => false}
+    @map_options = { "type" => "ROADMAP", 'detect_location' => true , "zoom" => 14, "auto_adjust" => false,'center_on_user' => false}
 
     if search.present?
       @location = search.first.geometry["location"]
