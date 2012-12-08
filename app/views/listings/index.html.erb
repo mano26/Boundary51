@@ -17,7 +17,7 @@
             <label for="fullname">Keyword:</label>
             <input type="text" id="fullname" />
             <p>Pets:</p>
-            <p><input type="checkbox" value="cats" id="cats" /> <label for="cats"> Cats</label></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p><input type="checkbox" value="cats" id="cats" /> <label for="cats"> Cats</label></p><br>
             <p><input type="checkbox" value="dogs" id="dogs" /> <label for="dogs"> Dogs</label></p><br><br>
             <p>Features:</p>
             <p><input type="checkbox" value="inunit" id="inunit" /> <label for="inunit"> In Unit</label></p><br>
@@ -36,18 +36,73 @@
             <div class="listbody">
               <div id="listhold1">
               <div class="listholder-stacked">
-                <div class="stack1">
-                  <div class="stackadd">123 Main Street</div>
-                  <div class="money-icons">img placeholder</div>
-                  <div class="listedby">Listed By: xxxxxxxxx</div>
+                <div id="stack1" class="stack1">
+                    <div class="list-photo1">
+                      <img src="/assets/apt2.jpeg" class="listpic" alt="Photo" />
+                    </div>
+                     <div class="list-details">
+                      Lincoln Park walk-up with all the space you could need<br>
+                      <strong>Address:</strong> 950 W Dickens #20<br>
+                      <strong>Beds:</strong> 2  |  
+                      <strong>Baths:</strong> 2
+                      <strong> Avl:</strong> 01/15/2013
+                  <div class="stackadd">950 W Dickens #20</div>
+                       <div class="timer">countdown</div>
+                  <div class="openhouse-icons"></div>
+                  <span class="a-btn-slide-text">$29</span>
+                  <div class="money-icons"></div>
+                  <div class="listedby">Listed By: Apartment Lovers</div>
                 </div>
-                <div class="stack2">
-                  2222
+                      <div class="list-rent">
+                      <div class="wishlist"><input type="button" class="btn-wish" value="+" /></div>
+                      <strong>$2200</strong><br>
+                      <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+                  </div>
                 </div>
-                <div class="stack3">
-                  <div class="stackadd">123 Main Street</div>
-                  <div class="money-icons">img placeholder</div>
-                  <div class="listedby">Listed By: xxxxxxxxx</div>
+                <div id="stack2" class="stack2">
+                   <div class="list-photo2">
+                      <img src="/assets/apt2.jpeg" class="listpic" alt="Photo" />
+                  </div>
+                   <div class="list-details">
+                      Updated 2 bed, vintage charm with laundry on-site<br>
+                      <strong>Address:</strong> 950 W Dickens #20<br>
+                      <strong>Beds:</strong> 2  |  
+                      <strong>Baths:</strong> 2 | 
+                      <strong> Avl:</strong> 01/15/2013
+                      <div class="stackadd">950 W Dickens #20</div>
+                      <div class="timer">countdown</div>
+                      <div class="openhouse-icons"></div>
+                      <div class="money-icons"></div>
+                      <div class="listedby">Listed By: ABC Realty</div>
+                  </div>
+                  <div class="list-rent">
+                      <div class="wishlist"><input type="button" class="btn-wish" value="+" /></div>
+                      <strong>$2200</strong><br>
+                      <input id="submit" type="submit" class="btn-rent" value="Rent" />
+                  </div>
+                </div>
+                <div id="stack3" class="stack3">
+                  <div class="list-photo">
+                      <img src="/assets/apt2.jpeg" class="listpic" alt="Photo" />
+                  </div>
+                  <div class="list-details">
+                    <div class="list-desc">
+                      Charming 2 bedroom with hardwood, HVAC, updated kitchen<br>
+                      <strong>Address:</strong> 950 W Dickens #20<br>
+                      <strong>Beds:</strong> 2  |  
+                      <strong>Baths:</strong> 2 | 
+                      <strong> Avl:</strong> 01/15/2013
+                      <div class="timer">countdown</div>
+                      <div class="openhouse-icons"></div>
+                      <div class="money-icons"></div>
+                      <div class="listedby">Listed By: Kass Management</div>
+                  </div>
+                  </div>
+                  <div class="list-rent">
+                      <div class="wishlist"><input type="button" class="btn-wish" value="+" /></div>
+                      <strong>$2200</strong><br>
+                      <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,13 +117,17 @@
                       <strong></strong><%= listing.unit_description %><br>
                       <strong>Address:</strong> <%= listing.address %><br>
                       <strong>Beds:</strong> <%= listing.beds %> |  
-                      <strong>Baths:</strong> <%= listing.bath %><br>
-                                         <% if session[:user_id].present? %>
-                      <%= form_for @wishlist, :remote => :true do |f| %>
-                      <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
-                      <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
-                      <%= f.submit 'W', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
-                      <% end %>
+                      <strong>Baths:</strong> <%= listing.bath %> | 
+                      <span class="avail"><strong>Avl:</strong> <%= listing.available %></span>
+                      <br>
+                      <div class="wishlist">
+                          <% if session[:user_id].present? %>
+                            <%= form_for @wishlist, :remote => :true do |f| %>
+                            <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+                            <%= f.hidden_field :listing_id, value: "#{listing.id}" %>
+                            <%= f.submit '+', :class=> 'btn-wish', :id => "#{dom_id(listing)}" %>
+                          <% end %>
+                      </div>
                     <% end %><br>
                       <% if @user.present? && @user.admin == true  %>
                       <%= link_to 'Edit', edit_listing_path(listing) %>
@@ -79,7 +138,6 @@
                   <div class="list-rent">
                       <strong>$<%= listing.price %></strong><br>
                       <input id="submit" type="submit" class="btn-rent" value="Rent"><br>
-                      <span class="avail"><strong>Avl:</strong> <%= listing.available %></span><br>
                   </div>
                </div>
            <% end %>

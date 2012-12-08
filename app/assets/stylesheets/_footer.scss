@@ -1,0 +1,75 @@
+@import "base";
+
+footer.dark { 
+	background: #525252; 
+}
+footer.dark .shell { 
+	height: 60px; 
+}
+footer.dark p { 
+	font-size: 12px; 
+	line-height: 58px; 
+	text-align: center; 
+	color: #fff; 
+}
+footer.dark p a { 
+	color: #fff; 
+	text-decoration: none; 
+}
+footer.dark p a:hover { 
+	text-decoration: underline; 
+}
+
+footer.light { 
+	background: #ececec; 
+	position: relative; 
+	z-index: 3; 
+	padding: 0 0 24px; 
+	width: 100%; 
+}
+footer.light .shell { 
+	width: 902px; 
+	background: #b2d6ec; 
+	border: 1px 
+	solid #d5d5d5; 
+	box-shadow: 0 0 1px #e0eff7 inset; 
+	padding: 40px 72px 40px 38px; 
+	overflow: hidden; 
+}
+footer.light .cloudmanic { 
+	width: 242px; 
+	height: 50px; 
+}
+footer.light .socials { 
+	width: 160px; 
+	padding: 2px 0 0; 
+}
+footer.light .socials a { 
+	float: left; 
+	width: 41px; 
+	height: 41px; 
+}
+footer.light .socials a + a { 
+	margin-left: 18px; 
+}
+footer.light .socials .email { 
+	background-position: 0 0; 
+}
+footer.light .socials .twitter { 
+	background-position: 0 -41px; 
+}
+footer.light .socials .facebook { 
+	background-position: 0 -82px; 
+}
+footer.light .foot-nav { 
+	font-size: 12px; 
+	line-height: 50px; 
+	color: #000; 
+	text-align: center; 
+	text-indent: -30px; 
+	word-spacing: 4px; 
+}
+footer.light .foot-nav a { 
+	word-spacing: 0; 
+	color: #000; 
+}

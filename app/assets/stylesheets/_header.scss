@@ -1,0 +1,113 @@
+@import "base";
+
+#header,
+#footer{ 
+	background:url(section-divider.png) no-repeat center bottom; 
+}
+#footer { 
+	background-position:center 0; 
+}
+#header { 
+	padding:13px 0 16px; 
+	position:relative; 
+	width:100%; 
+	z-index: 10; 
+}
+
+header.light { 
+	background: #ebebeb; 
+	width: 100%; 
+	height: 150px; 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 99; 
+	box-shadow: 0 1px 40px rgba(0,0,0,0.3); 
+}
+
+header.light .shell { 
+	height: 75px; 
+}
+header.light nav { 
+	padding: 6px 0 0 48px; 
+	font-size: 14px; 
+	line-height: 37px; 
+	text-transform: uppercase; 
+	text-shadow: 0 1px 1px rgba(255,255,255,.9); 
+}
+
+header.light nav a { 
+	color: #252525; 
+	float: left; 
+	padding: 0 17px; 
+}
+header.light nav a + a { 
+	margin-left: 15px; 
+}
+header.light a:hover { 
+	text-decoration: none; 
+}
+header.light nav a.current { 
+	padding: 0 16px; 
+	border: 1px solid #d5d5d5; 
+	border-radius: 10px; 
+	background: #b2d6ec; 
+	box-shadow: 0 1px 0 #e0eff7 inset, 1px 0 0 #e0eff7 inset, -1px 0 0 #e0eff7 inset, 0 -1px 0 #e0eff7 inset; 
+	line-height: 35px; 
+}
+
+header.light a.trial {
+	width: 105px; 
+	height: 72px; 
+	padding: 13px 20px 0; 
+	text-align: center;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold; 
+	color: #d8ecb2; 
+	text-shadow: 0 1px 1px rgba(0,0,0,0.7); 
+	position: relative; 
+	margin: 0 48px -35px 20px; 
+}
+header.light a.trial:hover { 
+	color: #fff; 
+}
+header.light a.colorbox { 
+	margin: 6px 0 0; 
+	color: #252525; 
+	padding: 0 17px; 
+	font-size: 14px; 
+	line-height: 37px; 
+	text-transform: uppercase; 
+	text-shadow: 0 1px 1px rgba(255,255,255,1); 
+}
+
+.logo {
+	@include span-columns(2,12);
+	float: left;
+	margin: 0 auto;
+	color: #f05023;
+	margin-top: 30px;
+	line-height: 1.1;	
+	margin-left: 5px;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.logoreal {
+	color: #303030;
+	z-index: 10;
+}
+
+.logotransparent {
+	color: #f05023;
+
+}	
+
+
+
+
+
+
+
+

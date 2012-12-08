@@ -1,0 +1,174 @@
+@import "base";
+@import "mixins";
+@import "sassybuttons";
+
+.list-photo {
+	@include span-columns(2,6);
+	max-width: 225px;
+	display: block;
+}
+
+.list-photo2, .list-photo1 {
+	@include span-columns(2,6);
+	max-width: 225px;
+	display: none;
+}
+
+.listholder {
+	@include rounded-corners(7px);
+	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
+	background: white;
+	height: 135px;
+	background: #ececec;
+	position: relative;
+	margin-bottom: 15px;
+	   	-moz-box-shadow: inset 0 0 10px #000000;
+   	-webkit-box-shadow: inset 0 0 10px #000000;
+   	box-shadow: inset 0 0 10px #000000;
+}
+
+.listholder:hover {
+ 	-webkit-transform: scale(1.025);
+       -moz-transform: scale(1.025);
+         -o-transform: scale(1.025);
+            transform: scale(1.025);
+	   -moz-box-shadow: 0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+   			box-shadow: 0 0 10px #000000;
+}
+
+.listholder-stacked {
+	@include rounded-corners(7px);
+	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
+	background: white;
+	height: 205px;
+	position: relative;
+	background: #ececec;
+	margin-bottom: 15px;
+	   	-moz-box-shadow: inset 0 0 10px #000000;
+   	-webkit-box-shadow: inset 0 0 10px #000000;
+   	box-shadow: inset 0 0 10px #000000;
+}
+
+.stackadd {
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	font-size: 12px;
+	padding-left: 7px;
+}
+
+.listedby {
+	float: left;
+	left: 240px;
+	bottom: 0;
+	font-size: 12px;
+	position: absolute;
+	padding-right: 7px;
+}
+
+.money-icons {
+	float: right;
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	background-image: url('/assets/money2.jpeg');
+	background-size: cover;
+	bottom: 4px;
+	right: 20px;
+	font-size: 12px;
+}
+
+.timer {
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 150px;
+	font-size: 12px;
+}
+
+.openhouse-icons {
+	float: right;
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	background-image: url('/assets/openhouse.jpeg');
+	background-size: cover;
+	bottom: 4px;
+	right: 75px;
+	font-size: 12px;
+}
+
+.stack3 {
+	@include rounded-corners(7px);
+	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
+	background: white;
+	height: 135px;
+	width: 100%;
+	top: 0px;
+	background: #ececec;
+	   	-moz-box-shadow: 0 0 10px #000000;
+   	-webkit-box-shadow: 0 0 10px #000000;
+   	box-shadow: 0 0 10px #000000;
+	position: absolute;
+   	z-index: 30;
+}
+
+.wishlist{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+.stack2 {
+	@include rounded-corners(7px);
+	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
+	top: 35px;
+	background: white;
+	width: 100%;
+	height: 135px;
+	background: #ececec;
+	   	-moz-box-shadow: 0 0 10px #000000;
+   	-webkit-box-shadow: 0 0 10px #000000;
+   	box-shadow: 0 0 10px #000000;
+	position: absolute;
+   	z-index: 20;
+}
+
+.stack1 {
+	@include rounded-corners(7px);
+	@include box-shadow(1px, 1px, 1px, 1px, #ccc);
+	top: 70px;
+	width: 100%;
+	background: white;
+	height: 135px;
+	background: #ececec;
+	-moz-box-shadow: 0 0 10px #000000;
+   	-webkit-box-shadow: 0 0 10px #000000;
+   	box-shadow: 0 0 10px #000000;
+   	position: absolute;
+   	z-index: 10;
+}
+
+.listpic {
+	@include rounded-corners(7px);
+	width: 85%;
+	max-width: 215px;
+	min-width: 125px;
+	height: 100%;
+}
+
+.list-details {
+	@include span-columns(3,6);
+	font-size: 12px;
+	margin-top: 5px;
+	float: left;
+}
+
+.list-rent {
+	@include span-columns(1,6);
+	float: right;
+	margin: 35px auto;
+	font-size: 16px;
+	text-align: center;
+}
