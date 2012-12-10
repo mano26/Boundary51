@@ -7,7 +7,7 @@ class Listing < ActiveRecord::Base
   has_many :wishlists
   has_many :users, :through => :wishlists
 
-  acts_as_gmappable :process_geocoding => false
+  acts_as_gmappable :process_geocoding => false, :validaton => true
   geocoded_by :address
   reverse_geocoded_by :latitude, :longitude
   
@@ -30,12 +30,9 @@ class Listing < ActiveRecord::Base
   #          end
   #        end
    
-def self.search(latitude, longitude) 
-  if latitude && longtitude
-    find(:all, :conditions => ['city Like ?', "%#{search}%", 'state Like', 'address near', 'zip Like'])
-  else
-    find(:all)
-  end
+def self.search
+    Gmaps4rails.places(params[:search]) 
+ 
 end
    
   def gmaps4rails_address
